@@ -1,0 +1,19 @@
+{
+  "name": "medica.com-backend",
+  "version": "1.0.0",
+  "description": "the back-end for the Medica.com platform which is a doctor appointment service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ziyad Al-junaidi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "morgan": "^1.10.0",
+    "node-fetch": "^3.1.0",
+    "request": "^2.88.2"
+  }
+}
