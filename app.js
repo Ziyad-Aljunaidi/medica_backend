@@ -9,35 +9,16 @@ const port = 3000;
 //var query = url_parts.query;
 
 app.get("/doctor", (req, res) =>{
-  if( req.query.city === "undefined"){
-    console.log("aa")
+
+  if(req.query.speciality != "undefined"){
+    res.send(JSON.stringify(jsonData.GetDocSpeciality(jsonData.GetDocsInCity(req.query.city), req.query.speciality), null, 2));
   }
-  else{
-    res.send(jsonData.GetDocsInCity(req.query.city));
-  }
-  //res.send(jsonData.GetDocsInCity(req.query.city))
-  //
+  //res.send(jsonData.GetDocsInCity(req.query.city));
 });
 
-
 app.get("/products", (req,res) => {
-   const products = [
-     {
-       id: 1,
-       name: "hammer",
-     },
-     {
-       id: 2,
-       name: "screwdriver",
-     },
-     ,
-     {
-       id: 3,
-       name: "wrench",
-     },
-   ];
-
+  const products = [];
   res.json(products);
-})
+});
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`Example app listening on port ${port}!`)); // 
