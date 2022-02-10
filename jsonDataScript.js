@@ -50,7 +50,7 @@ function GetDocId(doc_list , doc_id){
     return doc_obj
 }
 
-console.log(GetDocId(GetDocsInCity('warman'), "13171"))
+//console.log(GetDocId(GetDocsInCity('warman'), "13171"))
 module.exports = {
     GetDocsInCity,
     GetDocSpeciality,

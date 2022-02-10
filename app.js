@@ -9,11 +9,19 @@ const port = 3000;
 //var query = url_parts.query;
 
 app.get("/doctor", (req, res) =>{
+  let city = req.query.city;
+  let speciality = req.query.speciality;
+  let id = req.query.id;
 
-  if(req.query.speciality != "undefined"){
-    res.send(JSON.stringify(jsonData.GetDocSpeciality(jsonData.GetDocsInCity(req.query.city), req.query.speciality), null, 2));
+  // checking the city query for undefined or empty.
+  if(city === ''|| typeof(city) === 'undefined'){
+    console.log("ma")
+  }else{
+    res.json(jsonData.GetDocsInCity(city))
   }
-  //res.send(jsonData.GetDocsInCity(req.query.city));
+  
+
+  
 });
 
 app.get("/products", (req,res) => {
@@ -21,4 +29,14 @@ app.get("/products", (req,res) => {
   res.json(products);
 });
 
+
+app.get("/api/doctor", (req,res) => {
+  let city = req.query.city;
+  let speciality = req.query.speciality;
+  let doctor = req.query.doctor;
+  let create_doctor = req.query.create_doctor;
+  //console.log(create_doctor)
+  console.log(city)
+});
 app.listen(port, () => console.log(`Example app listening on port ${port}!`)); // 
+

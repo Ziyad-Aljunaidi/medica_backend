@@ -61,5 +61,4 @@ function ExportDocsData(cityname){
 module.exports = {
     GetDocsInCity,
     ExportDocsData,
-
 };

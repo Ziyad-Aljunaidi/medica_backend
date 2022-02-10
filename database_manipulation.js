@@ -5,20 +5,7 @@ let doctorsDataFolder = fs.readdirSync('./new_final_data_json');
 
 async function main() {
     
-    /**
-     * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
-     * See https://docs.mongodb.com/drivers/node/ for more details
-     */
-
     const uri = `mongodb+srv://ziyad_db:MacNCheese59@cluster0.jy6bo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
-    
-    /**
-     * The Mongo Client you will use to interact with your database
-     * See https://mongodb.github.io/node-mongodb-native/3.6/api/MongoClient.html for more details
-     * In case: '[MONGODB DRIVER] Warning: Current Server Discovery and Monitoring engine is deprecated...'
-     * pass option { useUnifiedTopology: true } to the MongoClient constructor.
-     * const client =  new MongoClient(uri, {useUnifiedTopology: true})
-     */
 
     const client = new MongoClient(uri);
 
@@ -38,11 +25,7 @@ async function main() {
 
         // await findOneListingByName(client, "Dr. Omar Rodwan");
         
-        await findListings(client, {
-            minimumNumberOfBedrooms: 4,
-            minimumNumberOfBathrooms: 2,
-            maximumNumberOfResults: 5
-        });
+        await findListingsByCity(client,"Yorkton");
 
     } catch(e){
 
@@ -94,30 +77,15 @@ async function findOneListingByName(client, nameOfListing) {
     }
 }
 
-async function findListings(client, {
-
-    maximumNumberOfResults = Number.MAX_SAFE_INTEGER
-} = {}) {
-    const cursor = client.db("doctors_database").collection("doctors_collection").find(
-                            {
-                                city:"Warman"   
-                            }
-                            );
-                           //.sort({ last_review: -1 })
-                           //.limit(maximumNumberOfResults);
+//Search for all valid listings matching city name.
+async function findListingsByCity(client, cityname) {
+    const cursor = client.db("doctors_database").collection("doctors_collection").find({city:cityname}).sort({ last_review: -1 })
 
     const results = await cursor.toArray();
 
     if (results.length > 0) {
         //console.log(`Found listing(s) with at least ${minimumNumberOfBedrooms} bedrooms and ${minimumNumberOfBathrooms} bathrooms:`);
         results.forEach((result, i) => {
-           // date = new Date(result.last_review).toDateString();
-
-            //console.log();
-            //console.log(`${i + 1}. name: ${result.name}`);
-            //console.log(`   _id: ${result._id}`);
-            //console.log(`   bedrooms: ${result.bedrooms}`);
-            //console.log(`   bathrooms: ${result.bathrooms}`);
             console.log(result)
             console.log(`   most recent review date: ${new Date(result.last_review).toDateString()}`);
         });
