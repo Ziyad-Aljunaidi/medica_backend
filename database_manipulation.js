@@ -1,36 +1,54 @@
-const { MongoClient } = require('mongodb');
+
+require('dotenv').config();
+const { MongoClient, MongoMissingCredentialsError } = require('mongodb');
 const ReadData = require("./passToDoctorsDb.js");
 const fs = require('fs');
+const { monitorEventLoopDelay } = require('perf_hooks');
 let doctorsDataFolder = fs.readdirSync('./new_final_data_json');
 
-async function main() {
-    
-    const uri = `mongodb+srv://ziyad_db:MacNCheese59@cluster0.jy6bo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+async function findListings(operation, arg) {
+    // arg could be [city, speciality, id]
+    const uri = process.env.DB_CALL;
 
     const client = new MongoClient(uri);
 
     try {
-
-        // Connect to the MongoDB cluster
+        // Connect to the MongoDB cluster.
         await client.connect();
-        await listDatabases(client);
-
-        // Make the appropriate DB calls
-
-        //await createListing(client, {Json Object});
-        //for(let i = 0; i<doctorsDataFolder.length; i++){
-        //    await createMultipleListings(client, ReadData.ExportDocsData(doctorsDataFolder[i].replace(".json", "")));
-        //}
+        //await listDatabases(client);
+        let data = {foo:"h"}
+        // Make the appropriate DB calls.
+        switch(operation){
+            // Read all listings by city.
+            case "city":
+                //console.log(await findListingsByCity(client, arg));
+                data = findListingsByCity(client,arg);
+                //console.log();
+                
+                break;
+            // Read all listings by Speciality.
+            case "speciality":
+                data = await findListingsBySpeciality(client, arg);
+                //console.log(await findListingsBySpeciality(client,arg));
+                break;
+            case "id":
+                data = await findListingsByDoctorID(client, arg);
+                //console.log(await findListingsByDoctorID(client,arg))
+                return data;
+                break;
+                //default:
+            //    console.log("meow")
+            
+        }
+        console.log(data)
+        
         
 
-        // await findOneListingByName(client, "Dr. Omar Rodwan");
-        
-        await findListingsByCity(client,"Yorkton");
 
     } catch(e){
 
         console.error(e);
-
+        return 0;
     }finally {
 
         // Close the connection to the MongoDB cluster
@@ -39,7 +57,7 @@ async function main() {
     }
 }
 
-main().catch(console.error);
+//main("id", "18918").catch(console.error);
 
 // Add functions that make DB calls here
 
@@ -51,19 +69,7 @@ async function listDatabases(client){
     databasesList.databases.forEach(db =>console.log(` - ${db.name}`));
 }
 
-// Function to create a single document in database
-async function createListing(client, newListing) {
-    const result = await client.db("doctors_database").collection("doctors_database").insertOne(newListing);
-    console.log(`New listing created with the following id: ${result.insertedId}`);
-}
 
-// Function to create a multiple documents in database
-async function createMultipleListings(client, newListings){
-    const result = await client.db("doctors_database").collection("doctors_collection").insertMany(newListings);
-
-    console.log(`${result.insertedCount} new listings(s) created with the following id(s):`);
-    console.log(result.insertedIds);
-}
 
 // Function to Find only one Document
 async function findOneListingByName(client, nameOfListing) {
@@ -84,13 +90,47 @@ async function findListingsByCity(client, cityname) {
     const results = await cursor.toArray();
 
     if (results.length > 0) {
-        //console.log(`Found listing(s) with at least ${minimumNumberOfBedrooms} bedrooms and ${minimumNumberOfBathrooms} bathrooms:`);
-        results.forEach((result, i) => {
-            console.log(result)
-            console.log(`   most recent review date: ${new Date(result.last_review).toDateString()}`);
-        });
+ 
+        return results;
     } else {
         //console.log(`No listings found with at least ${minimumNumberOfBedrooms} bedrooms and ${minimumNumberOfBathrooms} bathrooms`);
-        console.log("not found")
+        // console.log("not found")
+        return 0;
     }
 }
+
+//Search for all valid listings matching city name.
+async function findListingsBySpeciality(client, speciality) {
+    const cursor = client.db("doctors_database").collection("doctors_collection").find({speciality: speciality}).sort({ last_review: -1 })
+
+    const results = await cursor.toArray();
+
+    if (results.length > 0) {
+
+        return results;
+    } else {
+        //console.log(`No listings found with at least ${minimumNumberOfBedrooms} bedrooms and ${minimumNumberOfBathrooms} bathrooms`);
+        // console.log("not found")
+        return 0;
+    }
+}
+
+//Search for all valid listings matching doctor ID.
+async function findListingsByDoctorID(client, doctor_id) {
+    const cursor = client.db("doctors_database").collection("doctors_collection").find({id: doctor_id}).sort({ last_review: -1 })
+
+    const results = await cursor.toArray();
+
+    if (results.length > 0) {
+        
+        return results;
+    } else {
+        //console.log(`No listings found with at least ${minimumNumberOfBedrooms} bedrooms and ${minimumNumberOfBathrooms} bathrooms`);
+        // console.log("not found")
+        return 0;
+    }
+}
+
+module.exports = {
+    findListings,
+};
