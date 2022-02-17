@@ -22,7 +22,7 @@ async function findListings(operation, arg) {
             // Read all listings by city.
             case "city":
                 //console.log(await findListingsByCity(client, arg));
-                data = findListingsByCity(client,arg);
+                data = await findListingsByCity(client,arg);
                 //console.log();
                 
                 break;
