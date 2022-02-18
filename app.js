@@ -1,10 +1,11 @@
+require('dotenv').config();
 const express = require("express");
 //const jsonData = require("./jsonDataScript.js");
 const app = express();
 var url = require("url");
 const database_manipulation = require("./database_manipulation.js")
 
-const port = 3000;
+const port = process.env.PORT;
 
 //var url_parts = url.parse(request.url, true);
 //var query = url_parts.query;
