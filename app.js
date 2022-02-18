@@ -13,31 +13,28 @@ function searchQuery(urlQuery, data){
     if(urlQuery.length != 0){
       if(urlQuery.city){
         console.log(urlQuery.city + " MEOW ")
-        data =  database_manipulation.findListings("city", urlQuery.city).then((result) => {
-          console.log(result);
-          console.log("FINAL1");
-          return result;
-        });
-      } else if(urlQuery.speciality){
+         data = database_manipulation.findListings("city", urlQuery.city);
+         return data;
+        
+      } 
+      else if(urlQuery.speciality){
         console.log(urlQuery.speciality)
-        data =  database_manipulation.findListings("speciality", urlQuery.speciality).then((result) => {
-          console.log(result);
-          console.log("FINAL2");
-          return result;
-        });
+        data =  database_manipulation.findListings("speciality", urlQuery.speciality)
+          return data;
+        
       } else if (urlQuery.id){
         console.log(urlQuery.id)
-        data =  database_manipulation.findListings("id", urlQuery.id).then((result) => {
-          console.log(result);
-          console.log("FINAL3");
-          return result;
-        });
+        data =  database_manipulation.findListings("id", urlQuery.id);
+        return data;
       }
-    }else{
-      console.log("no url queries found.")
+      
     }
+    else{
+      //console.log("no url queries found.")
+    }
+    
   }catch(e){
-    console.error(e);
+    //console.error(e);
   }
 }
 
@@ -70,14 +67,19 @@ app.get("/api/doctor", (req,res) => {
   let create_doctor = req.query.create_doctor;
   let urlQuery = req.query;
   //console.log(create_doctor)
-  let data = []
-  searchQuery(urlQuery, data);
-  //console.log(req.query)
-
-  //let data =  database_manipulation.findListings("id", id).then((result) => {
-  //  console.log(result," ",id);
-  //  res.json(result)
-  //});
+  let jsondata = []
+  async function meow(haha){
+    haha = await database_manipulation.findListings("id", urlQuery.id);
+    return haha;
+  }  
+  //meow().then((result) =>{
+  //  console.log(result)
+  //})
+  
+  searchQuery(urlQuery).then((result) =>{
+    console.log(result);
+    res.json(result);
+  });
 });
 app.listen(port, () => console.log(`Example app listening on port ${port}!`)); // 
 

@@ -25,22 +25,23 @@ async function findListings(operation, arg) {
                 data = await findListingsByCity(client,arg);
                 //console.log();
                 
-                break;
+                return data;
             // Read all listings by Speciality.
             case "speciality":
                 data = await findListingsBySpeciality(client, arg);
                 //console.log(await findListingsBySpeciality(client,arg));
-                break;
+                return data;
             case "id":
                 data = await findListingsByDoctorID(client, arg);
                 //console.log(await findListingsByDoctorID(client,arg))
+                
                 return data;
-                break;
                 //default:
             //    console.log("meow")
             
         }
-        console.log(data)
+        //return data;
+        //console.log(data)
         
         
 
