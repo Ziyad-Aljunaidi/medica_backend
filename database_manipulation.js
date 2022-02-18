@@ -1,10 +1,10 @@
 
 require('dotenv').config();
 const { MongoClient, MongoMissingCredentialsError } = require('mongodb');
-const ReadData = require("./passToDoctorsDb.js");
+//const ReadData = require("./passToDoctorsDb.js");
 const fs = require('fs');
 const { monitorEventLoopDelay } = require('perf_hooks');
-let doctorsDataFolder = fs.readdirSync('./new_final_data_json');
+//let doctorsDataFolder = fs.readdirSync('./new_final_data_json');
 
 async function findListings(operation, arg) {
     // arg could be [city, speciality, id]
