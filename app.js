@@ -1,5 +1,5 @@
 const express = require("express");
-const jsonData = require("./jsonDataScript.js");
+//const jsonData = require("./jsonDataScript.js");
 const app = express();
 var url = require("url");
 const database_manipulation = require("./database_manipulation.js")
