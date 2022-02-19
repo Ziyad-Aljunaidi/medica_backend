@@ -16,35 +16,19 @@ async function findListings(operation, arg) {
         // Connect to the MongoDB cluster.
         await client.connect();
         //await listDatabases(client);
-        let data = {foo:"h"}
         // Make the appropriate DB calls.
         switch(operation){
-            // Read all listings by city.
+            // Read all listings by url.query.
             case "city":
-                //console.log(await findListingsByCity(client, arg));
                 data = await findListingsByCity(client,arg);
-                //console.log();
-                
                 return data;
-            // Read all listings by Speciality.
             case "speciality":
                 data = await findListingsBySpeciality(client, arg);
-                //console.log(await findListingsBySpeciality(client,arg));
                 return data;
             case "id":
                 data = await findListingsByDoctorID(client, arg);
-                //console.log(await findListingsByDoctorID(client,arg))
-                
                 return data;
-                //default:
-            //    console.log("meow")
-            
         }
-        //return data;
-        //console.log(data)
-        
-        
-
 
     } catch(e){
 
@@ -58,19 +42,14 @@ async function findListings(operation, arg) {
     }
 }
 
-//main("id", "18918").catch(console.error);
-
-// Add functions that make DB calls here
+// -----Add functions that make DB calls here-----
 
 // Function to read collection in the database
 async function listDatabases(client){
     databasesList = await client.db().admin().listDatabases();
-
     console.log("Databases:");
     databasesList.databases.forEach(db =>console.log(` - ${db.name}`));
 }
-
-
 
 // Function to Find only one Document
 async function findOneListingByName(client, nameOfListing) {
@@ -94,8 +73,7 @@ async function findListingsByCity(client, cityname) {
  
         return results;
     } else {
-        //console.log(`No listings found with at least ${minimumNumberOfBedrooms} bedrooms and ${minimumNumberOfBathrooms} bathrooms`);
-        // console.log("not found")
+        console.log("No listings found :(")
         return 0;
     }
 }
@@ -103,15 +81,12 @@ async function findListingsByCity(client, cityname) {
 //Search for all valid listings matching city name.
 async function findListingsBySpeciality(client, speciality) {
     const cursor = client.db("doctors_database").collection("doctors_collection").find({speciality: speciality}).sort({ last_review: -1 })
-
     const results = await cursor.toArray();
 
     if (results.length > 0) {
-
         return results;
     } else {
-        //console.log(`No listings found with at least ${minimumNumberOfBedrooms} bedrooms and ${minimumNumberOfBathrooms} bathrooms`);
-        // console.log("not found")
+        console.log("No listings found :(")
         return 0;
     }
 }
@@ -126,8 +101,7 @@ async function findListingsByDoctorID(client, doctor_id) {
         
         return results;
     } else {
-        //console.log(`No listings found with at least ${minimumNumberOfBedrooms} bedrooms and ${minimumNumberOfBathrooms} bathrooms`);
-        // console.log("not found")
+        console.log("No listings found :(")
         return 0;
     }
 }
