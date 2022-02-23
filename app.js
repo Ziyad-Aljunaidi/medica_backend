@@ -15,28 +15,24 @@ async function searchQuery(urlQuery, data){
       
       data = database_manipulation.findListings("city", urlQuery.city);
       let new_data = await data;
+
       console.log(new_data[0].speciality)
       data = [];
+      
       for(let i = 0; i<new_data.length; i++){
         if(new_data[i].speciality === urlQuery.speciality){
           data.push(new_data[i]);
-          //console.log(new_data[i])
         }
       }
-    }
-    else if(urlQuery.city != undefined){
+    }else if(urlQuery.city != undefined){
       console.log(urlQuery.city + " CITY");
       data = database_manipulation.findListings("city", urlQuery.city);
-    } 
-    else if(urlQuery.speciality != undefined){
+    }else if(urlQuery.speciality != undefined){
       console.log(urlQuery.speciality+" SPECIALITY")
-      data =  database_manipulation.findListings("speciality", urlQuery.speciality)
-      //  return data;
-      
-    } else if(urlQuery.id != undefined){
+      data =  database_manipulation.findListings("speciality", urlQuery.speciality)      
+    }else if(urlQuery.id != undefined){
       console.log(urlQuery.id+" ID")
       data =  database_manipulation.findListings("id", urlQuery.id);
-      // return data;
     }
     return data;
   }catch(e){
@@ -57,11 +53,9 @@ app.get("/api/doctor", (req,res) => {
     });
     
   }else{
-    console.log("NO QUERY FOUND!")
+    console.log("NO QUERY FOUND! ;(")
   }
-
 });
-
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`)); // 
 
