@@ -42,6 +42,7 @@ async function searchQuery(urlQuery, data){
 
 app.get("/", (req, res) =>{
   res.send("WELCOME TO MEDICA72.COM API")
+  console.log("testing route ;)")
 });
 
 app.get("/api/doctor", (req,res) => {
