@@ -1,3 +1,7 @@
+// LEGACY CODE. 
+// RUN APP THROUGH functions/index.js 
+
+
 require('dotenv').config();
 const express = require("express");
 //const jsonData = require("./jsonDataScript.js");

@@ -1,33 +1,70 @@
 const functions = require("firebase-functions");
 
+require('dotenv').config();
 const express = require("express");
-const req = require("express/lib/request");
-// require("dotenv").config();
+//const jsonData = require("./jsonDataScript.js");
+const api = express();
+var url = require("url");
+const database_manipulation = require("./database_manipulation.js")
 
-const webApp = express();
+// using the PORT in the .env file
+// const port = process.env.PORT;
 
-webApp.use(express.urlencoded({
-  extended: true,
-}));
+async function searchQuery(urlQuery, data){
+  try{
+    if(urlQuery.city != undefined && urlQuery.speciality != undefined){
+      console.log("city & speciality queries")
+      
+      data = database_manipulation.findListings("city", urlQuery.city);
+      let new_data = await data;
 
-// const PORT = 5000;
+      console.log(new_data[0].speciality)
+      data = [];
+      
+      for(let i = 0; i<new_data.length; i++){
+        if(new_data[i].speciality === urlQuery.speciality){
+          data.push(new_data[i]);
+        }
+      }
+    }else if(urlQuery.city != undefined){
+      console.log(urlQuery.city + " CITY");
+      data = database_manipulation.findListings("city", urlQuery.city);
+    }else if(urlQuery.speciality != undefined){
+      console.log(urlQuery.speciality+" SPECIALITY")
+      data =  database_manipulation.findListings("speciality", urlQuery.speciality)      
+    }else if(urlQuery.id != undefined){
+      console.log(urlQuery.id+" ID")
+      data =  database_manipulation.findListings("id", urlQuery.id);
+    }
+    return data;
+  }catch(e){
+    console.error(e);
+  }
+}
 
-webApp.get("/", (req, res) => {
-  res.send("Hello World!");
+api.get("/", (req, res) =>{
+  res.send("WELCOME TO MEDICA72.COM API")
+  console.log("testing route ;)")
 });
 
-webApp.get("/meow", (req, res) => {
-  res.json([{cat: "meow"}]);
+api.get("/doctor", (req,res) => {
+  let urlQuery = req.query;
+  console.log(urlQuery.city, urlQuery.id, urlQuery.speciality)
+  if(Object.keys(urlQuery).length != 0){
+    searchQuery(urlQuery).then((result) =>{
+      res.json(result);
+    });
+    
+  }else{
+    console.log("NO QUERY FOUND! ;(")
+  }
 });
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
 
-exports.webApp = functions.https.onRequest(webApp);
+// app.listen(port, () => console.log(`Example app listening on port ${port}!`)); // 
 
-/*
-webApp.listen(PORT, () => {
-  console.log(`Server is up and running at ${PORT}`)
-});
-*/
+
+exports.api = functions.https.onRequest(api);
+
+
 
 
