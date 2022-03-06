@@ -21,7 +21,7 @@ function GetDocsInCity(cityName)
     return doctorJson;
 }
 
-
+/*
 function ExportDocsData(cityname){
     let doctorJson = GetDocsInCity(cityname);
     let docList = [];
@@ -54,6 +54,7 @@ function ExportDocsData(cityname){
     return docList;
 }
 
+*/
 
 //console.log(ExportDocsData("warman"))
 //console.log(doctorsDataFolder.length)

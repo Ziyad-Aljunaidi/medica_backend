@@ -36,7 +36,7 @@ async function searchQuery(urlQuery, data){
       console.log(urlQuery.id+" ID")
       data =  database_manipulation.findListings("id", urlQuery.id);
     }
-    return data;
+    return data
   }catch(e){
     console.error(e);
   }
@@ -47,13 +47,20 @@ api.get("/", (req, res) =>{
   console.log("testing route ;)")
 });
 
+api.get("/test", (req, res) =>{
+  res.end(JSON.stringify({'test':2},null, 2))
+  console.log("testing route ;)")
+});
+
 api.get("/doctor", (req,res) => {
   let urlQuery = req.query;
   console.log(urlQuery.city, urlQuery.id, urlQuery.speciality)
   if(Object.keys(urlQuery).length != 0){
     searchQuery(urlQuery).then((result) =>{
-      res.json(result);
+     // res.json(result);
+     res.end(JSON.stringify(result,null, 2))
     });
+
     
   }else{
     console.log("NO QUERY FOUND! ;(")
