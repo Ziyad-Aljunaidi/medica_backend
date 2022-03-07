@@ -7,29 +7,29 @@ and its no way near a secure nor functional database alternative.
 const { json } = require('body-parser');
 const fs = require('fs');
 
-let doctorsDataFolder = fs.readdirSync('./new_final_data_json');
+let doctorsDataFolder = fs.readdirSync('./functions/new_final_data_json');
 
 // Function to get all the doctors in specific city
 function GetDocsInCity(cityName)
 {
     cityName = cityName.toLowerCase();
 
-    let doctorFile = fs.readFileSync(`./new_final_data_json/${cityName}.json`)
+    let doctorFile = fs.readFileSync(`./functions/new_final_data_json/${cityName}.json`)
     let doctorJson = JSON.parse(doctorFile);
-    let doctorJsonLength = Object.keys(doctorJson.doctors).length;
+    let doctorJsonLength = Object.keys(doctorJson).length;
 
     return doctorJson;
 }
 
-/*
+
 function ExportDocsData(cityname){
     let doctorJson = GetDocsInCity(cityname);
     let docList = [];
-    let doctorJsonLength = Object.keys(doctorJson.doctors).length;
+    let doctorJsonLength = Object.keys(doctorJson).length;
 
     for(let i = 0; i<doctorJsonLength; i++){
 
-        let doc_obj = doctorJson.doctors[i];
+        let doc_obj = doctorJson[i];
         
         let final_doc_obj = 
         {
@@ -54,10 +54,10 @@ function ExportDocsData(cityname){
     return docList;
 }
 
-*/
 
-//console.log(ExportDocsData("warman"))
-//console.log(doctorsDataFolder.length)
+
+console.log(ExportDocsData("warman"))
+// console.log(doctorsDataFolder.length)
 
 module.exports = {
     GetDocsInCity,

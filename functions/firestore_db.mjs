@@ -14,17 +14,29 @@ const firebaseApp = initializeApp({
 
 const db = getFirestore();
 
-console.log(doctors_db)
+//console.log(doctors_db)
 
-/*
-function ExportDocsData(cityname){
+// Function to get all the doctors in specific city
+function GetDocsInCity(cityName)
+{
+    //cityName = cityName.toLowerCase();
+
+    let doctorFile = fs.readFileSync(`./new_final_data_json/${cityName}`)
+    let doctorJson = JSON.parse(doctorFile);
+    let doctorJsonLength = Object.keys(doctorJson).length;
+
+    return doctorJson ;
+}
+
+
+async function ExportDocsData(cityname){
   let doctorJson = GetDocsInCity(cityname);
   let docList = [];
-  let doctorJsonLength = Object.keys(doctorJson.doctors).length;
+  let doctorJsonLength = Object.keys(doctorJson).length;
 
   for(let i = 0; i<doctorJsonLength; i++){
 
-      let doc_obj = doctorJson.doctors[i];
+      let doc_obj = doctorJson[i];
       
       let final_doc_obj = 
       {
@@ -37,7 +49,7 @@ function ExportDocsData(cityname){
           "city": cityname,
           "phone": doc_obj.phone,
           "gender": doc_obj.gender,
-          "google-map": doc_obj["google-map"],
+          "google_map": doc_obj["google_map"],
           "qualification": doc_obj.qualification,
           "speciality": doc_obj.speciality,
           "url": doc_obj.url
@@ -45,19 +57,31 @@ function ExportDocsData(cityname){
       }
 
       docList.push(final_doc_obj)
+      try {
+        const docRef = await addDoc(collection(db, "doctors"), final_doc_obj);
+        console.log("Document written with ID: ", docRef.id);
+      } catch (e) {
+        console.error("Error adding document: ", e);
+      }
   }
+
   return docList;
 }
-*/
 
+ExportDocsData(doctors_db[0])
+// console.log(ExportDocsData(doctors_db[0]))
 
+for(let i=0; i<(doctors_db).length; i++){
+  //console.log(i)
+  //console.log(ExportDocsData(doctors_db[i]))
+  ExportDocsData(doctors_db[i])
+}
+
+/*
 try {
-  const docRef = await addDoc(collection(db, "users"), {
-    first: "Tez",
-    last: "ziad",
-    born: 1969
-  });
+  const docRef = await addDoc(collection(db, "users"), ExportDocsData(doctors_db[0]));
   console.log("Document written with ID: ", docRef.id);
 } catch (e) {
   console.error("Error adding document: ", e);
 }
+*/
