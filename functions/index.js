@@ -67,6 +67,15 @@ api.get("/doctor", (req,res) => {
   }
 });
 
+api.get("/reserve" , (req,res) => {
+  let urlQuery = req.query;
+  let time = new Date(Date.now());
+  console.log(
+    urlQuery, time.toString()
+  )
+})
+
+
 // app.listen(port, () => console.log(`Example app listening on port ${port}!`)); // 
 
 
