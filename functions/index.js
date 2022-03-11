@@ -6,7 +6,7 @@ const express = require("express");
 const api = express();
 var url = require("url");
 const database_manipulation = require("./database_manipulation.js")
-
+const send_sms = require("./send_sms.js")
 // using the PORT in the .env file
 // const port = process.env.PORT;
 
@@ -69,9 +69,9 @@ api.get("/doctor", (req,res) => {
 
 api.get("/reserve" , (req,res) => {
   let urlQuery = req.query;
-  let time = new Date(Date.now());
+  
   console.log(
-    urlQuery, time.toString()
+    urlQuery
   )
 })
 

@@ -1,5 +1,4 @@
-import * as fs from "fs";
-let InfoBip = require('infobip-nodejs')
+
 // Initialize Cloud Firestore through Firebase
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
@@ -48,11 +47,13 @@ async function queryUser(userId) {
 // });
 
 // testing queryUSer Function
-// queryUser("19002").then((result) => {
-// console.log(result);
-// });
+//queryUser("18021").then((result) => {
+//console.log(result);
+//});
 
-module.exports= {
-  queryDoctor,
-  queryUser
-}
+//module.exports= {
+//  queryDoctor,
+//  queryUser
+//}
+
+export { queryDoctor, queryUser};

@@ -1,0 +1,316 @@
+[
+
+    {
+        "id":"17000",
+        "Name": "yasser saieed",
+        "Category": "internal medicine",
+        "Qualification": "Consultant of internal medicine, diabetes, kidney and liver diseases",
+        "Speciality": "Internist specialized in Adult Hepatology, Adult Diabetes and Endocrinology, Adult Urology, General Internal Medicine, Adult Kidney and Pediatric Diabetes and Endocrinology",
+        "google_map": "https://goo.gl/maps/ojWjDsjvFAdiKA559",
+        "address": "Cairo, Elmoqautm Sharea 9",
+        "city": "cairo",
+        "Fee": "250"
+
+    },
+
+    {
+        "id":"17001",
+        "Name": "ahmed amin",
+        "Category": "internal medicine",
+        "Qualification": "Professor and Consultant of General Internal Medicine, College of Medicine",
+        "Speciality": "Internist specialized in General Internal Medicine, Adult Gastroenterology and Endoscopy, Adult Diabetes and Endocrinology and Adult Hepatology",
+        "google_map": "https://goo.gl/maps/zPi4ysomRgBDrEK38",
+        "address": "Cairo, sharea el 90 el ganobi",
+        "city": "cairo",
+        "Fee": "400"
+    },
+
+    {
+        "id":"17002",
+        "Name": "mange bin yamen",
+        "Category": "internal medicine",
+        "Qualification": "Consultant of internal medicine, heart, diabetes and critical cases",
+        "Speciality": "Internist specialized in General Internal Medicine, Adult Cardiology, Adult Diabetes and Endocrinology, Adult Kidney, Adult Liver, Adult Gastroenterology and Endoscopy and Adult Chest and Respiratory",
+        "google_map": "https://goo.gl/maps/iBvhnihq8QwQN4Uf7",
+        "address": "teraat al tawfiqiya" ,
+        "city": "cairo",
+        "Fee": "100"
+    },
+
+    {
+        "id":"17003",
+        "Name": "osama srour",
+        "Category": "dermatology",
+        "Qualification": "Professor of Dermatology, Venereology and Andrology, Faculty of Medicine - Alexandria University",
+        "Speciality": "Dermatologist specialized in adult dermatology, venereal diseases, andrology, pediatric dermatology, cosmetic and laser",
+        "google_map": "https://goo.gl/maps/WMotGB6MhGLgAWkY9",
+        "address": "alexandria, 23 abd al hameed badway alazarita" ,
+        "city": "cairo",
+        "Fee": "150"
+    },
+
+    {
+        "id":"17004",
+        "Name": "sara qoutb",
+        "Category": "dermatology",
+        "Qualification": "Consultant and PhD in Dermatology, Cosmetology and Laser Therapy - National Laser Institute - Kasr Al-Ainy Faculty of Medicine - Cairo University",
+        "Speciality": "Dermatologist specialized in facial plastic surgery, venereal diseases, plastic surgery and laser, pediatric dermatology and adult dermatology",
+        "google_map": "https://goo.gl/maps/TAXG2kVGX6mZVCss7",
+        "address": "giza, sharee faisel" ,
+        "city": "cairo",
+        "Fee": "300"
+    },
+
+    {
+        "id":"17005",
+        "Name": "ahmed abdul moniem abd alkarim",
+        "Category": "dermatology",
+        "Qualification": "Consultant of dermatology, venereology, andrology, infertility, dermatology, laser treatment, mesotherapy, erectile dysfunction and premature ejaculation",
+        "Speciality": "Dermatologist specialized in venereology, pediatric dermatology, adult dermatology, andrology and plastic surgery and laser",
+        "google_map": "https://goo.gl/maps/nBg7hwgistmFmpKm6",
+        "address": "alexandria, 9 sharea el galaa amam noqtet el horaya" ,
+        "city": "cairo",
+        "Fee": "200"
+    },
+
+    {
+        "id":"17006",
+        "Name": "wael abbas",
+        "Category": "pediatrics",
+        "Qualification": "Consultant of Pediatrics, Neonatology and Intensive Care.",
+        "Speciality": "Pediatrician and New Born specialized in Pediatric Allergy and Immunology, Pediatrics, New Born and Natural Breast Feeding",
+        "google_map": "https://goo.gl/maps/CioSgwJtRfDyFQ6C8",
+        "address": "Cairo, New cairo, elbostan qesm masr el gdeda" ,
+        "city": "cairo",
+        "Fee": "250"
+    },
+
+    {
+        "id":"17007",
+        "Name": "baciena abd al hassieb",
+        "Category": "pediatrics",
+        "Qualification": "Consultant of Pediatrics, Newborns, Chest Diseases, Allergy and Immunology for Children and Head of the Pediatric Department, Abbasid Chest Hospital",
+        "Speciality": "Pediatrician and neonatologist specialized in Pediatric Allergy and Immunology and New Born",
+        "google_map": "https://goo.gl/maps/Fz6L4gBRJFBD72hs7",
+        "address": "cairo, nasr city, tareq el nasr" ,
+        "city": "cairo",
+        "Fee": "200"
+    },
+
+    {
+        "id":"17008",
+        "Name": "gehan adli",
+        "Category": "pediatrics",
+        "Qualification": "Consultant of Pediatrics and Neonatology, Ain Shams University",
+        "Speciality": "Pediatrician and New Born specialized in Pediatrics, New Born, Pediatric Dietitian and Nutrition and Natural Breast Feeding",
+        "google_map": "https://goo.gl/maps/oryytY5bz3dWfBnG6",
+        "address": "cairo, hadayeq al qoba, manshyt el sadr" ,
+        "city": "cairo",
+        "Fee": "150"
+    },
+
+    {
+        "id":"17009",
+        "Name": "rania qassem",
+        "Category": "pediatrics",
+        "Qualification": "Consultant of Pediatrics and Neonatology, Ain Shams University",
+        "Speciality": "Pediatrician and New Born specialized in Pediatrics, New Born, Pediatric Dietitian and Nutrition and Natural Breast Feeding",
+        "google_map": "https://goo.gl/maps/XVii4iN7dKuSDqix9",
+        "address": "cairo, el 90 el ganobi",
+        "city": "cairo",
+        "Fee": "250"
+    },
+
+    {
+        "id":"17010",
+        "Name": "mohamed bassam",
+        "Category": "pediatrics",
+        "Qualification": "Pediatrician and neonatology specialist",
+        "Speciality": "Pediatrician and neonatologist specialized in neonatology, pediatric dietitian and nutrition, natural breastfeeding and pediatrics",
+        "google_map": "https://goo.gl/maps/zGPp3kfc5wVvHMpK6",
+        "address": "cairo, el hayee el 3",
+        "city": "cairo",
+        "Fee": "200"
+    },
+
+    {
+        "id":"17011",
+        "Name": "doaa mahmoud hamouda",
+        "Category": "psychology",
+        "Qualification": "Consultant Psychiatrist, Ain Shams University",
+        "Speciality": "Psychiatrist specialized in adolescent psychiatry, adult psychiatry and family counseling",
+        "google_map": "https://goo.gl/maps/jx39WWojLTWeRR6X6",
+        "address": "cairo, nasr city",
+        "city": "cairo",
+        "Fee": "400"
+    },
+
+    {
+        "id":"17012",
+        "Name": "beshoy hosney",
+        "Category": "psychology",
+        "Qualification": "psychiatrist",
+        "Speciality": "A psychiatric clinic specialized in family counseling, adult psychiatry, adolescent psychiatry, toxicology and addiction treatment",
+        "google_map": "https://goo.gl/maps/Sm519ZVzTkU1kCJw6",
+        "address": "cairo, nozhua ",
+        "city": "cairo",
+        "Fee": "500"
+    },
+
+    {
+        "id":"17013",
+        "Name": "houda ali",
+        "Category": "psychology",
+        "Qualification": "Psychiatry and Neurologist",
+        "Speciality": "Psychiatrist specialized in Pediatric Psychiatry, Adult Psychiatry, Addiction, Toxicology and Adolescent Psychiatry",
+        "google_map": "https://goo.gl/maps/SWv49fyXXvkXjG8m8",
+        "address": "cairo, nasr city, el mantqa al 8, 113 mostafa al nahaas",
+        "city": "cairo",
+        "Fee": "400"
+    },
+
+    {
+        "id":"17014",
+        "Name": "mohamed tag eldin",
+        "Category": "surgery",
+        "Qualification": "Consultant of Gastrointestinal, Obesity and Laparoscopic Surgeries",
+        "Speciality": "General Surgeon specialized in Stomach Tumors, Adult General Surgery, Obesity Surgery, Adult Gastrointestinal and Endoscopic Surgery and Abdominal Surgery",
+        "google_map": "https://goo.gl/maps/bn5v4kJXju7Zw49j8",
+        "address": "cairo, nasr city, al mantqa al 6",
+        "city": "cairo",
+        "Fee": "300"
+    },
+
+    {
+        "id":"17015",
+        "Name": "mohamed alanani",
+        "Category": "surgery",
+        "Qualification": "Professor of Surgery and Oncology",
+        "Speciality": "General Surgeon specialized in Liver Tumors, Obesity Surgery, Adult General Surgery, Colon Tumors, Breast Tumors, Adult Oncology Surgery",
+        "google_map": "https://goo.gl/maps/RoNa5uB1acAcbMny6",
+        "address": "cairo, Medical park1 (nasr orthodentic clinics)",
+        "city": "cairo",
+        "Fee": "300"
+    },
+
+    {
+        "id":"17016",
+        "Name": "mohamed sera",
+        "Category": "surgery",
+        "Qualification": "General surgery, laparoscopic surgery, colon and anal surgery",
+        "Speciality": "General Surgeon specialized in Endocrine Surgery, Breast Tumor, Adult Oncology Surgery, Trauma and Accident Surgery, Adult General Surgery, Adult Gastroenterological Surgery, and abdominal surgery",
+        "google_map": "https://goo.gl/maps/zmakK72YKd5Ej34n8",
+        "address": "cairo, tareq el nasr",
+        "city": "cairo",
+        "Fee": "300"
+    },
+
+    {
+        "id":"17017",
+        "Name": "hazem mahmoud hamdy qeshlan",
+        "Category": "orthopedics",
+        "Qualification": "Consultant and teacher of orthopedics, joints, endoscopy and sports injuries",
+        "Speciality": "Orthopedist specialized in Adult Orthopedics, Arthroscopy and Sports Injuries, Bone Deformities, Foot and Ankle Orthopedics, Joint Replacement and Hand and Shoulder Orthopedics",
+        "google_map": "https://goo.gl/maps/FNu7N463oYXHZqRy9",
+        "address": "cairo,qesm elnozha, elmatar, 9 sharaa bin el wardi",
+        "city": "cairo",
+        "Fee": "300"
+    },
+
+    {
+        "id":"17018",
+        "Name": "omar abdelaziz taalb",
+        "Category": "orthopedics",
+        "Qualification": "Consultant of surgery and arthroscopy of the shoulder, knee and sports injuries - Instructor of orthopedic surgery, Faculty of Medicine, Kasr Al-Ainy University, Cairo University.",
+        "Speciality": "Orthopedic doctor specialized in arthroscopy and sports injuries, adult orthopedics and hand and shoulder orthopedics",
+        "google_map": "https://goo.gl/maps/pdM2xNcmriTmPvQh9",
+        "address": "giza, Twin Tower - Shiekh Zayed",
+        "city": "cairo",
+        "Fee": "400"
+    },
+
+    {
+        "id":"17019",
+        "Name": "mena sami baqtr",
+        "Category": "orthopedics",
+        "Qualification": "Orthopedic, joint and spine surgery specialist",
+        "Speciality": "Orthopedist specialized in Pediatric Orthopedics, Adult Orthopedics, Pediatric Orthopedics and Adult Orthopedics",
+        "google_map": "https://goo.gl/maps/UckAVfd2RbcbUZuE8",
+        "address": "cairo, zahraa al maadi, 1/3 shatr alkhames degla",
+        "city": "cairo",
+        "Fee": "200"
+    },
+
+    {
+        "id":"17020",
+        "Name": "islam hosney abu elmaati",
+        "Category": "ophthalmology",
+        "Qualification": "Consultant of ophthalmology, cornea and LASIK surgery",
+        "Speciality": "Ophthalmologist specialized in Pediatric Ophthalmology, Adult Ophthalmology, Lasik, Vision Correction, Cataract and Retinal and Vitreous Surgery",
+        "google_map": "https://goo.gl/maps/MgqFzcqqX34AZ97t9",
+        "address": "cairo, mostafa al nahaas, el mantqa el 8",
+        "city": "cairo",
+        "Fee": "250"
+    },
+
+    {
+        "id":"17021",
+        "Name": "mohamed nasr eldin",
+        "Category": "ophthalmology",
+        "Qualification": "Consultant of ophthalmology and femtolasik - Ain Shams University",
+        "Speciality": "Ophthalmologist specialized in pediatric ophthalmology, LASIK, vision correction, cataract and retinal and vitreous surgery",
+        "google_map": "https://g.page/Loay-Scan-Center-Heliopolis?share",
+        "address": "cairo, masr elgdeda, sharea khalifa al maamon",
+        "city": "cairo",
+        "Fee": "300"
+    },
+
+    {
+        "id":"17022",
+        "Name": "mohamed shrara",
+        "Category": "ophthalmology",
+        "Qualification": "Ophthalmology specialist",
+        "Speciality": "Ophthalmologist specialized in adult and pediatric ophthalmology",
+        "google_map": "https://goo.gl/maps/XTt6cp6gtyJkTL9x7",
+        "address": "cairo, talaat mostafa, Medical Center 3",
+        "city": "cairo",
+        "Fee": "300"
+    },
+
+    {
+        "id":"17023",
+        "Name": "ahmed shehab",
+        "Category": "dentistry",
+        "Qualification": "Bachelor of Oral and Dental Medicine, Ain Shams University, Member of the Egyptian Society of Dental Implants, Fellowship of Cosmetic Dentistry - University of Genoa - Italy",
+        "Speciality": "Dentist specialized in Periodontics, Endodontics, Cosmetic Dentistry, Pediatric Dentistry, Implantology, Adult Dentistry, Dental Radiology, Elder Dentistry, Prosthodontics and Orthodontics",
+        "google_map": "https://goo.gl/maps/t3yt7kUaknZihT4b6",
+        "address": "cairo qesm el nozhua, gamal abdlnasr, gesr alsuez",
+        "city": "cairo",
+        "Fee": "80"
+    },
+
+    {
+        "id":"17024",
+        "Name": "ahmed mamdouh hegazy",
+        "Category": "dentistry",
+        "Qualification": "Consultants of Implantology and Orthodontics - Ain Shams University Member of the American Society of Dental Implants - New Jersey",
+        "Speciality": "Dentist specialized in Cosmetic Dentistry, Implantology, Periodontics, Prosthodontics, Dental Radiology, Pediatric Dentistry, Adult Dentistry, Elder Dentistry, Orthodontics, Fillings and Endodontics",
+        "google_map": "https://goo.gl/maps/NwZCeGyuXivDyKGm8",
+        "address": "cairo, masr elgdeda, Hegazy Dental Clinic ",
+        "city": "cairo",
+        "Fee": "200"
+    },
+
+    {
+        "id":"17025",
+        "Name": "mohamed safwat masoud",
+        "Category": "dentistry",
+        "Qualification": "Specialist in Fixed Prosthodontics, Cosmetic and Dental Implants - Cairo University",
+        "Speciality": "Dentist specialized in Adult Dentistry, Dental Radiology, Elder Dentistry, Implantology, Orthodontics, Oral and Maxillofacial Surgery, Pediatric Dentistry, Endodontics, Periodontics, Prosthodontics and Cosmetic Dentistry",
+        "google_map": "https://goo.gl/maps/WTMzAy5vTMegrP34A",
+        "address": "cairo, el maadi, intersection of nasr street,CLINIC32 ",
+        "city": "cairo",
+        "Fee": "200"
+    }
+    
+]
