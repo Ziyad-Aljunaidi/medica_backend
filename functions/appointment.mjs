@@ -1,5 +1,5 @@
 import * as fs from "fs";
-
+let InfoBip = require('infobip-nodejs')
 // Initialize Cloud Firestore through Firebase
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
@@ -8,54 +8,51 @@ const firebaseApp = initializeApp({
   authDomain: "medica72-5933c.firebaseapp.com",
   projectId: "medica72-5933c",
 });
+import { collection, getDocs } from "firebase/firestore";
+
 
 const db = getFirestore();
 
-import { collection, getDocs } from "firebase/firestore";
 //import res from "express/lib/response";
 
 async function queryDoctor(doctorId) {
-  let tatadata = "tezk 7mra";
+  let resultData = "tezk 7mra";
   const queryDoc = await getDocs(collection(db, "doctors"));
+
   queryDoc.forEach((doc) => {
     if (doc.data()["id"] == doctorId) {
-      tatadata = JSON.stringify(tatadata, null, 2)
-      //console.log(`${doc.id} => ${tatadata}`);
-      return tatadata
-      // return currentData;
-    }else{
-      tatadata = "tezy 7mra"
-      return tatadata
+      resultData = doc.data();
     }
-    
-
   });
-  
+  return resultData;
 }
 
-queryDoctor("18001").then((result) => {
-  console.log(result)
-})
 
-// const queryDoctor = await getDocs(collection(db, "doctors"));
-// queryDoctor.forEach((doc) => {
-//   if( doc.data()["id"] == usrId){
-//     console.log(`${doc.id} => ${JSON.stringify(doc.data(),null,2)}`);
-//   }
+async function queryUser(userId) {
+  let resultData = "tezk 7mra";
+  const query_user = await getDocs(collection(db, "users"));
 
-// console.log(doc.data());
-//});
+  query_user.forEach((doc) => {
+    if (doc.data()["id"] == userId) {
+      resultData = doc.data();
+    }
+  });
 
-// let userId = 19003;
-// let doctorId;
+  return resultData;
+}
 
-/*
-const queryUser = await getDocs(collection(db, "users", ));
-queryUser.forEach((doc) => {
-  if( doc.data()["id"] == usrId){
-    console.log(`${doc.id} => ${JSON.stringify(doc.data(),null,2)}`);
-  }
-  
-  // console.log(doc.data());
-});
-*/
+
+// testing queryDoctor Function
+// queryDoctor("17000").then((result) => {
+// console.log(result);
+// });
+
+// testing queryUSer Function
+// queryUser("19002").then((result) => {
+// console.log(result);
+// });
+
+module.exports= {
+  queryDoctor,
+  queryUser
+}

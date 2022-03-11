@@ -1,29 +1,135 @@
 [
     {
-        "id":18001,
+        "id": 18001,
         "name": "Johnny sins",
         "address": "cairo, nasr city",
         "province": "cairo",
         "email": "ziyad@email.com",
         "phone_number": "+201113357439",
-        "google_map": "https://goo.gl/maps/2GrKLVkW93az8twZA"
+        "google_map": "https://goo.gl/maps/2GrKLVkW93az8twZA",
+        "availability": [
+            {
+                "sunday": [
+                    "4:30",
+                    "4:45",
+                    "5:00",
+                    "5:15",
+                    "5:30",
+                    "5:45",
+                    "6:00"
+                ]
+            },
+            {
+                "tuesday": [
+                    "4:30",
+                    "4:45",
+                    "5:00",
+                    "5:15",
+                    "5:30",
+                    "5:45",
+                    "6:00"
+                ]
+            },
+            {
+                "thursday": [
+                    "4:30",
+                    "4:45",
+                    "5:00",
+                    "5:15",
+                    "5:30",
+                    "5:45",
+                    "6:00"
+                ]
+            }
+        ]
     },
+
     {
-        "id":18001,
+        "id": 18001,
         "name": "Harry maguire",
         "address": "cairo, maadi",
         "province": "cairo",
         "email": "ziyad@email.com",
         "phone_number": "+201113357439",
-        "google_map": "https://goo.gl/maps/XBamkNb8d3TFge1C9"
+        "google_map": "https://goo.gl/maps/XBamkNb8d3TFge1C9",
+        "availability": [
+            {
+                "sunday": [
+                    "4:30",
+                    "4:45",
+                    "5:00",
+                    "5:15",
+                    "5:30",
+                    "5:45",
+                    "6:00"
+                ]
+            },
+            {
+                "tuesday": [
+                    "4:30",
+                    "4:45",
+                    "5:00",
+                    "5:15",
+                    "5:30",
+                    "5:45",
+                    "6:00"
+                ]
+            },
+            {
+                "thursday": [
+                    "4:30",
+                    "4:45",
+                    "5:00",
+                    "5:15",
+                    "5:30",
+                    "5:45",
+                    "6:00"
+                ]
+            }
+        ]
     },
     {
-        "id":18001,
+        "id": 18001,
         "name": "karim Benzema",
         "address": "cairo, fifth installment",
         "province": "cairo",
         "email": "ziyad@email.com",
         "phone_number": "+201113357439",
-        "google_map": "https://goo.gl/maps/XBamkNb8d3TFge1C9"
+        "google_map": "https://goo.gl/maps/XBamkNb8d3TFge1C9",
+        "availability": [
+            {
+                "sunday": [
+                    "4:30",
+                    "4:45",
+                    "5:00",
+                    "5:15",
+                    "5:30",
+                    "5:45",
+                    "6:00"
+                ]
+            },
+            {
+                "tuesday": [
+                    "4:30",
+                    "4:45",
+                    "5:00",
+                    "5:15",
+                    "5:30",
+                    "5:45",
+                    "6:00"
+                ]
+            },
+            {
+                "thursday": [
+                    "4:30",
+                    "4:45",
+                    "5:00",
+                    "5:15",
+                    "5:30",
+                    "5:45",
+                    "6:00"
+                ]
+            }
+        ]
     }
 ]
