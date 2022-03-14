@@ -50,6 +50,23 @@ async function queryUser(userId) {
   return resultData;
 }
 
+async function querySpeciality(docSpeciality) {
+  const query_user = await getFr.getDocs(getFr.collection(db, "doctors"));
+  let resultData =[];
+  query_user.forEach((doc) => {
+    if (doc.data()["category"] == docSpeciality) {
+      resultData.push(doc.data());
+    }
+
+  });
+  return resultData;
+}
+
+
+
+// querySpeciality("pediatrics").then((result) => {
+//   console.log(result)
+// })
 
 // testing queryDoctor Function
 //queryDoctor("17000").then((result) => {
@@ -69,5 +86,6 @@ async function queryUser(userId) {
 
 module.exports= {
   queryDoctor,
-  queryUser
+  queryUser,
+  querySpeciality
 }

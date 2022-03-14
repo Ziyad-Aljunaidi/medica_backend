@@ -89,6 +89,13 @@ api.get("/reserve" , (req,res) => {
   //
 })
 
+api.get("/newdoctor", (req, res) => {
+  let speciality = req.query.speciality;
+  db_calls.querySpeciality(speciality).then((result) => {
+    res.json(result)
+  })
+})
+
 
 // app.listen(port, () => console.log(`Example app listening on port ${port}!`)); // 
 
