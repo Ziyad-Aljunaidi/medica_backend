@@ -2,11 +2,13 @@ const functions = require("firebase-functions");
 
 require('dotenv').config();
 const express = require("express");
-//const jsonData = require("./jsonDataScript.js");
+const db_calls = require("./db_calls.js");
+
 const api = express();
 var url = require("url");
 const database_manipulation = require("./database_manipulation.js")
-const send_sms = require("./send_sms.js")
+const send_sms = require("./send_sms.js");
+const req = require("express/lib/request");
 // using the PORT in the .env file
 // const port = process.env.PORT;
 
@@ -42,6 +44,14 @@ async function searchQuery(urlQuery, data){
   }
 }
 
+async function send_comfirmation(doc_id, usr_id){
+  let doc_data = await db_calls.queryDoctor(doc_id)
+  let user_phonenumber = await db_calls.queryUser(usr_id)
+  console.log(doc_data)
+  console.log(user_phonenumber)
+  send_sms.sendMsg(doc_data.name, doc_data.address, doc_data.google_map, user_phonenumber)
+}
+
 api.get("/", (req, res) =>{
   res.send("WELCOME TO MEDICA72.COM API")
   console.log("testing route ;)")
@@ -69,10 +79,14 @@ api.get("/doctor", (req,res) => {
 
 api.get("/reserve" , (req,res) => {
   let urlQuery = req.query;
-  
-  console.log(
-    urlQuery
-  )
+  let doc_id = urlQuery.doc_id;
+  let usr_id = urlQuery.usr_id;
+  let day = urlQuery.day;
+  let time = urlQuery.time
+  let doc_data 
+  send_comfirmation(doc_id, usr_id)
+ 
+  //
 })
 
 

@@ -19,7 +19,7 @@ let messagebird = require('messagebird')(messagebird_api);
     });
 */
 
-function sendMsg(docName, docAddress, docMapLocation, docAppointment, userPhoneNumber){
+function sendMsg(docName, docAddress, docMapLocation){
   var params = {
     'originator': 'TestMessage',
     'recipients': [
