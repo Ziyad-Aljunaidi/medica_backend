@@ -49,7 +49,7 @@ async function send_comfirmation(doc_id, usr_id){
   let user_phonenumber = await db_calls.queryUser(usr_id)
   console.log(doc_data)
   console.log(user_phonenumber)
-  send_sms.sendMsg(doc_data.name, doc_data.address, doc_data.google_map, user_phonenumber)
+  send_sms.sendMsg(doc_data.name, doc_data.address, doc_data.google_map, user_phonenumber.phone_number)
 }
 
 api.get("/", (req, res) =>{

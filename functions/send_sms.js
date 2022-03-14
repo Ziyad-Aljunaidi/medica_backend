@@ -1,5 +1,6 @@
 require('dotenv').config();
 let messagebird_api = process.env.MESSAGEBIRD_API
+//let messagebird_api = process.env.TEST_MESSAGEBIRD_API
 let messagebird = require('messagebird')(messagebird_api);
 
 /*
@@ -19,14 +20,18 @@ let messagebird = require('messagebird')(messagebird_api);
     });
 */
 
-function sendMsg(docName, docAddress, docMapLocation){
+
+function sendMsg(docName, docAddress, docMapLocation, user_phonenumber){
   var params = {
     'originator': 'TestMessage',
     'recipients': [
-      '+201113357439'
+      //'+201113357439'
+     //`${user_phonenumber}`
+     user_phonenumber
   ],
-    'body': `Your appointment for Dr. ${docName} is confirmed, clinic address: ${docAddress}, Google-Map: ${docMapLocation}`
+    'body': `Your appointment for Dr. ${docName} is confirmed, clinic address: ${docAddress}, Google-Map: LINK`
   };
+  //console.log(user_phonenumber)
 
   messagebird.messages.create(params, function (err, response) {
     if (err) {
@@ -38,11 +43,10 @@ function sendMsg(docName, docAddress, docMapLocation){
 
 
 
-// let location = "https://goo.gl/maps/2GrKLVkW93az8twZA"
-// let name = "Johnny sins"
-// let address = "cairo, maadi"
-// 
-// sendMsg(name, address, location)
+//let location = "https://goo.gl/maps/2GrKLVkW93az8twZA"
+//let name = "Johnny sins"
+//let address = "cairo, maadi"
+//sendMsg(name, address, location)
 
 module.exports={
   sendMsg,
