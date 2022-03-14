@@ -20,14 +20,14 @@ let messagebird = require('messagebird')(messagebird_api);
     });
 */
 
-let docMapLocation = "https://goo.gl/maps/4yfW2c4PQHSn1GhUA"
+//let docMapLocation = "https://goo.gl/maps/4yfW2c4PQHSn1GhUA"
 function sendMsg(docName, docAddress, docMapLocation, user_phonenumber){
   var params = {
     'originator': 'Medica',
     'recipients': [
-    '+201113357439'
+    //'+201113357439'
      //`${user_phonenumber}`
-     //user_phonenumber
+     user_phonenumber
   ],
     'body': `Your appointment for Dr. ${docName} is confirmed, clinic address: ${docAddress}, Google-Map: ${docMapLocation}`
   };
@@ -43,10 +43,10 @@ function sendMsg(docName, docAddress, docMapLocation, user_phonenumber){
 
 
 
- let location = "https://goo.gl/maps/2GrKLVkW93az8twZA"
- let name = "Johnny sins"
- let address = "cairo, maadi"
- sendMsg(name, address, docMapLocation)
+//let location = "https://goo.gl/maps/2GrKLVkW93az8twZA"
+//let name = "Johnny sins"
+//let address = "cairo, maadi"
+//sendMsg(name, address, docMapLocation)
 
 module.exports={
   sendMsg,
