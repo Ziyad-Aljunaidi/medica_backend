@@ -11,6 +11,14 @@ const send_sms = require("./send_sms.js");
 const req = require("express/lib/request");
 // using the PORT in the .env file
 // const port = process.env.PORT;
+const cors=require("cors");
+const corsOptions ={
+   origin:'*', 
+   credentials:true,            //access-control-allow-credentials:true
+   optionSuccessStatus:200,
+}
+
+api.use(cors(corsOptions)) 
 
 async function searchQuery(urlQuery, data){
   try{
