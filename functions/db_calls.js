@@ -103,6 +103,8 @@ async function SignIn(user_data){
   return resultData;
 }
 
+//console.log("maw")
+
 // SignIn({email:"zadj99965@gmail.com", password: "cygaMaw"}).then((result)=>{
 //   console.log(result)
 // })
