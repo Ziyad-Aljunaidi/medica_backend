@@ -12,6 +12,7 @@
 const fbInitApp = require("firebase/app")
 const getFr = require("firebase/firestore")
 
+
 const firebaseApp = fbInitApp.initializeApp({
   apiKey: "AIzaSyD18CvQu6AWzU9CFu_75aL92nOThgeZd6A",
   authDomain: "medica72-5933c.firebaseapp.com",
@@ -61,7 +62,6 @@ async function querySpeciality(docSpeciality) {
   });
   return resultData;
 }
-
 
 
 // querySpeciality("pediatrics").then((result) => {

@@ -60,6 +60,15 @@ async function send_comfirmation(doc_id, usr_id){
   send_sms.sendMsg(doc_data.name, doc_data.address, doc_data.google_map, user_phonenumber.phone_number)
 }
 
+async function send_comfirmation_test(doc_id, usr_name, user_phonenumber, user_time){
+  let doc_data = await db_calls.queryDoctor(doc_id)
+  //let user_phonenumber = await db_calls.queryUser(usr_id)
+  //console.log(doc_data)
+  //console.log(user_phonenumber)
+  console.log(doc_data, usr_name , user_phonenumber, user_time)
+  send_sms.sendMsgDemo(doc_data.name, doc_data.address, doc_data.google_map,usr_name, user_phonenumber, user_time)
+}
+
 api.get("/", (req, res) =>{
   res.send("WELCOME TO MEDICA72.COM API")
   console.log("testing route ;)")
@@ -102,6 +111,21 @@ api.get("/newdoctor", (req, res) => {
   db_calls.querySpeciality(speciality).then((result) => {
     res.json(result)
   })
+})
+
+api.get("/send", (req, res) => {
+  let queries = req.query
+  console.log(queries)
+  res.json(queries)
+});
+
+api.get("/verify", (req, res) => {
+  let urlQuery = req.query
+  let doc_id = urlQuery.doc_id;
+  let user_name = urlQuery.user_name;
+  let user_phone = urlQuery.user_phone;
+  let user_date = urlQuery.user_date;
+  send_comfirmation_test(doc_id, user_name, user_phone, user_date)
 })
 
 

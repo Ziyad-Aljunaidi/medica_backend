@@ -41,6 +41,26 @@ function sendMsg(docName, docAddress, docMapLocation, user_phonenumber){
   });
 }
 
+function sendMsgDemo(docName, docAddress, docMapLocation, user_name,user_phonenumber, user_time){
+  var params = {
+    'originator': 'Medica',
+    'recipients': [
+    //'+201113357439'
+     //`${user_phonenumber}`
+     "+2"+user_phonenumber
+  ],
+    'body': `Dear ${user_name}\n Your appointment for Dr. ${docName} is confirmed at ${user_time}, clinic address: ${docAddress}, Google-Map: ${docMapLocation}`
+  };
+  //console.log(user_phonenumber)
+
+  messagebird.messages.create(params, function (err, response) {
+    if (err) {
+      return console.log(err);
+    }
+    console.log(response);
+  });
+}
+
 
 
 //let location = "https://goo.gl/maps/2GrKLVkW93az8twZA"
@@ -50,4 +70,5 @@ function sendMsg(docName, docAddress, docMapLocation, user_phonenumber){
 
 module.exports={
   sendMsg,
+  sendMsgDemo
 }
