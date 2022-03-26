@@ -12,6 +12,7 @@ const req = require("express/lib/request");
 // using the PORT in the .env file
 // const port = process.env.PORT;
 const cors=require("cors");
+const { get } = require("express/lib/response");
 const corsOptions ={
    origin:'*', 
    credentials:true,            //access-control-allow-credentials:true
@@ -129,6 +130,34 @@ api.get("/verify", (req, res) => {
 })
 
 
+api.get("/addUser", (req, res) => {
+  let queries = req.query;
+  let usr_id = Date.now()
+  let usr_data = {
+    id: usr_id,
+    first_name: queries.first_name,
+    last_name: queries.last_name,
+    email: queries.email,
+    date_of_birth: queries.date_of_birth,
+    password: queries.password,
+    phone_number: queries.phone_number
+
+  }
+  db_calls.AddUsersData(usr_data).then( res.json(usr_data))
+})
+
+
+api.get("/signin", (req, res) => {
+  let queries = req.query;
+  let user_data = {
+    email: queries.email,
+    password: queries.password
+  }
+  db_calls.SignIn(user_data).then((result) => {
+    res.json(result)
+    console.log(result)
+  })
+})
 // app.listen(port, () => console.log(`Example app listening on port ${port}!`)); // 
 
 
