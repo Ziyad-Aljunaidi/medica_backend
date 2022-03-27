@@ -158,6 +158,14 @@ api.get("/signin", (req, res) => {
     console.log(result)
   })
 })
+
+api.get("/getUser", (req,res) =>{
+  let user_token = req.query.user_token
+  db_calls.queryUser(user_token).then((result) =>{
+    res.json(result);
+    console.log(result);
+  })
+})
 // app.listen(port, () => console.log(`Example app listening on port ${port}!`)); // 
 
 
