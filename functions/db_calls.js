@@ -64,25 +64,6 @@ async function querySpeciality(docSpeciality) {
 }
 
 
-<<<<<<< HEAD
-=======
-async function addUser(user_data){
-  /*
-  const add_user = await getFr.setDoc(getFr.collection(db, "users"));
-  try{
-    add_user.forEach((doc) => {
-      doc.data()["id"] == user_data.id
-    })
-  }catch(e){
-    console.log(e)
-  }
- */
-
-  await getFr.setDoc(getFr.doc(db,"users", "one"),user_data)
-}
-
-//addUser({id:"52648"})
-
 async function AddUsersData(users_db) {
     try {
       const docRef = await getFr.addDoc(getFr.collection(db, "users"),users_db);
@@ -108,14 +89,12 @@ async function SignIn(user_data){
 
 //console.log("mawaa")
 
-// SignIn({email:"zadj99965@gmail.com", password: "cygaMaw"}).then((result)=>{
-//   console.log(result)
-// })
+//  SignIn({email:"zadj99965@gmail.com", password: "cygaMaw"}).then((result)=>{
+  //  console.log(result)
+//  })
 
 //AddUsersData({id:"456",name:"test"})
 
-
->>>>>>> 29eaaa42c350dfc5f2d36911ccdf247091c72fa1
 // querySpeciality("pediatrics").then((result) => {
 //   console.log(result)
 // })

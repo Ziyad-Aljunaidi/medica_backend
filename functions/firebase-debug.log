@@ -1,0 +1,827 @@
+[debug] [2022-03-26T15:50:00.570Z] ----------------------------------------------------------------------
+[debug] [2022-03-26T15:50:00.572Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ziyad\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2022-03-26T15:50:00.572Z] CLI Version:   10.2.2
+[debug] [2022-03-26T15:50:00.572Z] Platform:      win32
+[debug] [2022-03-26T15:50:00.572Z] Node Version:  v14.16.1
+[debug] [2022-03-26T15:50:00.573Z] Time:          Sat Mar 26 2022 17:50:00 GMT+0200 (Eastern European Standard Time)
+[debug] [2022-03-26T15:50:00.573Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-03-26T15:50:00.638Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-03-26T15:50:00.639Z] > authorizing via signed-in user (ziyad.al.junaidi@gmail.com)
+[debug] [2022-03-26T15:50:00.639Z] [iam] checking project medica72-5933c for permissions ["firebase.projects.get"]
+[debug] [2022-03-26T15:50:00.640Z] > refreshing access token with scopes: []
+[debug] [2022-03-26T15:50:00.641Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-03-26T15:50:01.559Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Sat, 26 Mar 2022 15:50:01 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-03-26T15:50:01.583Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/medica72-5933c:testIamPermissions [none]
+[debug] [2022-03-26T15:50:01.584Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/medica72-5933c:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-03-26T15:50:03.996Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/medica72-5933c:testIamPermissions 200
+[debug] [2022-03-26T15:50:03.997Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/medica72-5933c:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-03-26T15:50:04.001Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/medica72-5933c [none]
+[debug] [2022-03-26T15:50:05.859Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/medica72-5933c 200
+[debug] [2022-03-26T15:50:05.860Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/medica72-5933c {"projectId":"medica72-5933c","projectNumber":"814793286058","displayName":"medica72","name":"projects/medica72-5933c","resources":{"hostingSite":"medica72-5933c","storageBucket":"medica72-5933c.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] 
+[info] === Serving from 'C:\Users\ziyad\Desktop\Medica.com-Backend'...
+[info] 
+[warn] !  Your requested "node" version "16" doesn't match your global version "14". Using node@14 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"16\" doesn't match your global version \"14\". Using node@14 from host."}}
+[debug] [2022-03-26T15:50:05.894Z] defaultcredentials: writing to file C:\Users\ziyad\AppData\Roaming\firebase\ziyad_al.junaidi_gmail.com_application_default_credentials.json
+[debug] [2022-03-26T15:50:05.896Z] Setting GAC to C:\Users\ziyad\AppData\Roaming\firebase\ziyad_al.junaidi_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\ziyad\\AppData\\Roaming\\firebase\\ziyad_al.junaidi_gmail.com_application_default_credentials.json"}}
+[debug] [2022-03-26T15:50:05.897Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/medica72-5933c/adminSdkConfig [none]
+[debug] [2022-03-26T15:50:06.531Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/medica72-5933c/adminSdkConfig 200
+[debug] [2022-03-26T15:50:06.531Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/medica72-5933c/adminSdkConfig {"projectId":"medica72-5933c","storageBucket":"medica72-5933c.appspot.com","locationId":"us-central"}
+[info] i  functions: Watching "C:\Users\ziyad\Desktop\Medica.com-Backend\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\" for Cloud Functions..."}}
+[debug] [2022-03-26T15:50:06.573Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2022-03-26T15:50:11.316Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "firebase": "^9.6.8",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "infobip-nodejs": "^0.1.0",
+    "messagebird": "^3.7.2",
+    "mongodb": "^4.2.2",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.7",
+    "request": "^2.88.2",
+    "twilio": "^3.75.1",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-03-26T15:50:11.316Z] Building nodejs source
+[debug] [2022-03-26T15:50:11.316Z] Analyzing nodejs backend spec
+[info] +  functions[us-central1-api]: http function initialized (http://localhost:5000/medica72-5933c/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/medica72-5933c/us-central1/api)."}}
+[debug] [2022-03-26T15:50:27.007Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-26T15:50:27.008Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-26T15:50:27.010Z] Accepted request GET /medica72-5933c/us-central1/api --> us-central1-api
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2022-03-26T15:50:27.033Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2022-03-26T15:50:27.034Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[debug] [2022-03-26T15:50:27.034Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-03-26T15:50:27.034Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: Assigning socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\10660 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\10660"}}
+[debug] [2022-03-26T15:50:27.035Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: BUSY"}}
+[debug] [2022-03-26T15:50:28.254Z] [runtime-status] [10660] Functions runtime initialized. {"cwd":"C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions","node_version":"14.16.1"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\ziyad\\\\Desktop\\\\Medica.com-Backend\\\\functions\",\"node_version\":\"14.16.1\"}"}}
+[debug] [2022-03-26T15:50:28.257Z] [runtime-status] [10660] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Disabled runtime features: undefined"}}
+[debug] [2022-03-26T15:50:28.260Z] [runtime-status] [10660] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"C:\\\\Users\\\\ziyad\\\\Desktop\\\\Medica.com-Backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2022-03-26T15:50:28.262Z] [runtime-status] [10660] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"C:\\\\Users\\\\ziyad\\\\Desktop\\\\Medica.com-Backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-03-26T15:50:28.262Z] [runtime-status] [10660] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-03-26T15:50:28.263Z] [runtime-status] [10660] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"C:\\\\Users\\\\ziyad\\\\Desktop\\\\Medica.com-Backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-03-26T15:50:28.314Z] [runtime-status] [10660] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-03-26T15:50:28.314Z] [runtime-status] [10660] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.18.1","resolution":"C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\node_modules\\firebase-functions\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"C:\\\\Users\\\\ziyad\\\\Desktop\\\\Medica.com-Backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}}"}}
+[debug] [2022-03-26T15:50:28.315Z] [runtime-status] [10660] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"C:\\\\Users\\\\ziyad\\\\Desktop\\\\Medica.com-Backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-03-26T15:50:28.316Z] [runtime-status] [10660] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"C:\\\\Users\\\\ziyad\\\\Desktop\\\\Medica.com-Backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2022-03-26T15:50:28.317Z] [runtime-status] [10660] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"C:\\\\Users\\\\ziyad\\\\Desktop\\\\Medica.com-Backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-03-26T15:50:28.317Z] [runtime-status] [10660] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.0.2","resolution":"C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"C:\\\\Users\\\\ziyad\\\\Desktop\\\\Medica.com-Backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2022-03-26T15:50:28.782Z] [runtime-status] [10660] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-03-26T15:50:28.783Z] [runtime-status] [10660] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Running api in signature http"}}
+[debug] [2022-03-26T15:50:28.785Z] [runtime-status] [10660] Attempting to listen to socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\10660 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\10660"}}
+[debug] [2022-03-26T15:50:28.791Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-26T15:50:28.792Z] [functions] Got req.url=/medica72-5933c/us-central1/api, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/medica72-5933c/us-central1/api, mapping to path=/"}}
+[debug] [2022-03-26T15:50:28.800Z] [runtime-status] [10660] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Ephemeral server handling GET request"}}
+[info] >  testing route ;) {"user":"testing route ;)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m testing route ;)"}}
+[debug] [2022-03-26T15:50:28.811Z] [runtime-status] [10660] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Ephemeral server survived."}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-03-26T15:50:28.818Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: IDLE"}}
+[debug] [2022-03-26T15:50:28.818Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-03-26T15:50:28.903Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2022-03-26T15:50:52.520Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-26T15:50:52.520Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-26T15:50:52.521Z] Accepted request GET /medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw --> us-central1-api
+[debug] [2022-03-26T15:50:52.521Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-03-26T15:50:52.521Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: Assigning socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\10660 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\10660"}}
+[debug] [2022-03-26T15:50:52.521Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: BUSY"}}
+[debug] [2022-03-26T15:50:52.521Z] [runtime-status] [10660] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-03-26T15:50:52.522Z] [runtime-status] [10660] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Running api in signature http"}}
+[debug] [2022-03-26T15:50:52.523Z] [runtime-status] [10660] Attempting to listen to socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\10660 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\10660"}}
+[debug] [2022-03-26T15:50:52.525Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-26T15:50:52.526Z] [functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw, mapping to path=/signin?email=zadj99965@gmail.com&password=cygaMaw {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw, mapping to path=/signin?email=zadj99965@gmail.com&password=cygaMaw"}}
+[debug] [2022-03-26T15:50:52.528Z] [runtime-status] [10660] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Ephemeral server handling GET request"}}
+[debug] [2022-03-26T15:50:52.531Z] [runtime-status] [10660] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Ephemeral server survived."}}
+[info] >  [ {"user":"[","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ["}}
+[info] >    { {"user":"  {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   {"}}
+[info] >      first_name: 'ziyad', {"user":"    first_name: 'ziyad',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     first_name: 'ziyad',"}}
+[info] >      email: 'zadj99965@gmail.com', {"user":"    email: 'zadj99965@gmail.com',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     email: 'zadj99965@gmail.com',"}}
+[info] >      id: 1648220731259, {"user":"    id: 1648220731259,","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     id: 1648220731259,"}}
+[info] >      last_name: 'aljunaidi', {"user":"    last_name: 'aljunaidi',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     last_name: 'aljunaidi',"}}
+[info] >      date_of_birth: '2461999', {"user":"    date_of_birth: '2461999',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     date_of_birth: '2461999',"}}
+[info] >      password: 'cygaMaw', {"user":"    password: 'cygaMaw',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     password: 'cygaMaw',"}}
+[info] >      phone_number: '01030533078' {"user":"    phone_number: '01030533078'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     phone_number: '01030533078'"}}
+[info] >    } {"user":"  }","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   }"}}
+[info] >  ] {"user":"]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ]"}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-03-26T15:50:53.815Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: IDLE"}}
+[debug] [2022-03-26T15:50:53.815Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-03-26T15:52:02.513Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-26T15:52:02.513Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-26T15:52:02.514Z] Accepted request GET /medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw --> us-central1-api
+[debug] [2022-03-26T15:52:02.514Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-03-26T15:52:02.515Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: Assigning socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\10660 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\10660"}}
+[debug] [2022-03-26T15:52:02.515Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: BUSY"}}
+[debug] [2022-03-26T15:52:02.517Z] [runtime-status] [10660] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-03-26T15:52:02.520Z] [runtime-status] [10660] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Running api in signature http"}}
+[debug] [2022-03-26T15:52:02.521Z] [runtime-status] [10660] Attempting to listen to socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\10660 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\10660"}}
+[debug] [2022-03-26T15:52:02.527Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-26T15:52:02.528Z] [functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw, mapping to path=/signin?email=zadj99965@gmail.com&password=cygaMaw {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw, mapping to path=/signin?email=zadj99965@gmail.com&password=cygaMaw"}}
+[debug] [2022-03-26T15:52:02.533Z] [runtime-status] [10660] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Ephemeral server handling GET request"}}
+[debug] [2022-03-26T15:52:02.535Z] [runtime-status] [10660] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Ephemeral server survived."}}
+[info] >  [ {"user":"[","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ["}}
+[info] >    { {"user":"  {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   {"}}
+[info] >      email: 'zadj99965@gmail.com', {"user":"    email: 'zadj99965@gmail.com',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     email: 'zadj99965@gmail.com',"}}
+[info] >      last_name: 'aljunaidi', {"user":"    last_name: 'aljunaidi',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     last_name: 'aljunaidi',"}}
+[info] >      id: 1648220731259, {"user":"    id: 1648220731259,","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     id: 1648220731259,"}}
+[info] >      password: 'cygaMaw', {"user":"    password: 'cygaMaw',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     password: 'cygaMaw',"}}
+[info] >      date_of_birth: '2461999', {"user":"    date_of_birth: '2461999',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     date_of_birth: '2461999',"}}
+[info] >      first_name: 'ziyad', {"user":"    first_name: 'ziyad',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     first_name: 'ziyad',"}}
+[info] >      phone_number: '01030533078' {"user":"    phone_number: '01030533078'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     phone_number: '01030533078'"}}
+[info] >    } {"user":"  }","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   }"}}
+[info] >  ] {"user":"]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ]"}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-03-26T15:52:03.909Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: IDLE"}}
+[debug] [2022-03-26T15:52:03.909Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-03-26T15:52:12.680Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-26T15:52:12.680Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-26T15:52:12.681Z] Accepted request GET /medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw --> us-central1-api
+[debug] [2022-03-26T15:52:12.681Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-03-26T15:52:12.682Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: Assigning socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\10660 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\10660"}}
+[debug] [2022-03-26T15:52:12.682Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: BUSY"}}
+[debug] [2022-03-26T15:52:12.684Z] [runtime-status] [10660] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-03-26T15:52:12.687Z] [runtime-status] [10660] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Running api in signature http"}}
+[debug] [2022-03-26T15:52:12.688Z] [runtime-status] [10660] Attempting to listen to socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\10660 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\10660"}}
+[debug] [2022-03-26T15:52:12.696Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-26T15:52:12.698Z] [functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw, mapping to path=/signin?email=zadj99965@gmail.com&password=cygaMaw {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw, mapping to path=/signin?email=zadj99965@gmail.com&password=cygaMaw"}}
+[debug] [2022-03-26T15:52:12.704Z] [runtime-status] [10660] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Ephemeral server handling GET request"}}
+[debug] [2022-03-26T15:52:12.705Z] [runtime-status] [10660] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Ephemeral server survived."}}
+[info] >  [ {"user":"[","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ["}}
+[info] >    { {"user":"  {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   {"}}
+[info] >      id: 1648220731259, {"user":"    id: 1648220731259,","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     id: 1648220731259,"}}
+[info] >      email: 'zadj99965@gmail.com', {"user":"    email: 'zadj99965@gmail.com',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     email: 'zadj99965@gmail.com',"}}
+[info] >      date_of_birth: '2461999', {"user":"    date_of_birth: '2461999',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     date_of_birth: '2461999',"}}
+[info] >      phone_number: '01030533078', {"user":"    phone_number: '01030533078',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     phone_number: '01030533078',"}}
+[info] >      password: 'cygaMaw', {"user":"    password: 'cygaMaw',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     password: 'cygaMaw',"}}
+[info] >      last_name: 'aljunaidi', {"user":"    last_name: 'aljunaidi',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     last_name: 'aljunaidi',"}}
+[info] >      first_name: 'ziyad' {"user":"    first_name: 'ziyad'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     first_name: 'ziyad'"}}
+[info] >    } {"user":"  }","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   }"}}
+[info] >  ] {"user":"]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ]"}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-03-26T15:52:13.292Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: IDLE"}}
+[debug] [2022-03-26T15:52:13.292Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-03-26T15:52:57.230Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-26T15:52:57.230Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-26T15:52:57.230Z] Accepted request GET /medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw --> us-central1-api
+[debug] [2022-03-26T15:52:57.230Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-03-26T15:52:57.230Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: Assigning socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\10660 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\10660"}}
+[debug] [2022-03-26T15:52:57.230Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: BUSY"}}
+[debug] [2022-03-26T15:52:57.231Z] [runtime-status] [10660] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-03-26T15:52:57.231Z] [runtime-status] [10660] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Running api in signature http"}}
+[debug] [2022-03-26T15:52:57.232Z] [runtime-status] [10660] Attempting to listen to socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\10660 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\10660"}}
+[debug] [2022-03-26T15:52:57.233Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-26T15:52:57.234Z] [functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw, mapping to path=/signin?email=zadj99965@gmail.com&password=cygaMaw {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw, mapping to path=/signin?email=zadj99965@gmail.com&password=cygaMaw"}}
+[debug] [2022-03-26T15:52:57.235Z] [runtime-status] [10660] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Ephemeral server handling GET request"}}
+[debug] [2022-03-26T15:52:57.236Z] [runtime-status] [10660] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Ephemeral server survived."}}
+[info] >  [ {"user":"[","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ["}}
+[info] >    { {"user":"  {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   {"}}
+[info] >      email: 'zadj99965@gmail.com', {"user":"    email: 'zadj99965@gmail.com',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     email: 'zadj99965@gmail.com',"}}
+[info] >      first_name: 'ziyad', {"user":"    first_name: 'ziyad',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     first_name: 'ziyad',"}}
+[info] >      id: 1648220731259, {"user":"    id: 1648220731259,","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     id: 1648220731259,"}}
+[info] >      last_name: 'aljunaidi', {"user":"    last_name: 'aljunaidi',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     last_name: 'aljunaidi',"}}
+[info] >      date_of_birth: '2461999', {"user":"    date_of_birth: '2461999',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     date_of_birth: '2461999',"}}
+[info] >      password: 'cygaMaw', {"user":"    password: 'cygaMaw',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     password: 'cygaMaw',"}}
+[info] >      phone_number: '01030533078' {"user":"    phone_number: '01030533078'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     phone_number: '01030533078'"}}
+[info] >    } {"user":"  }","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   }"}}
+[info] >  ] {"user":"]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ]"}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-03-26T15:52:57.975Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: IDLE"}}
+[debug] [2022-03-26T15:52:57.976Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-03-26T16:08:08.041Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-26T16:08:08.042Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-26T16:08:08.042Z] Accepted request GET /medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw --> us-central1-api
+[debug] [2022-03-26T16:08:08.042Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-03-26T16:08:08.043Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: Assigning socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\10660 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\10660"}}
+[debug] [2022-03-26T16:08:08.043Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: BUSY"}}
+[debug] [2022-03-26T16:08:08.045Z] [runtime-status] [10660] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-03-26T16:08:08.048Z] [runtime-status] [10660] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Running api in signature http"}}
+[debug] [2022-03-26T16:08:08.049Z] [runtime-status] [10660] Attempting to listen to socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\10660 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\10660"}}
+[debug] [2022-03-26T16:08:08.056Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-26T16:08:08.057Z] [functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw, mapping to path=/signin?email=zadj99965@gmail.com&password=cygaMaw {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw, mapping to path=/signin?email=zadj99965@gmail.com&password=cygaMaw"}}
+[debug] [2022-03-26T16:08:08.061Z] [runtime-status] [10660] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Ephemeral server handling GET request"}}
+[debug] [2022-03-26T16:08:08.062Z] [runtime-status] [10660] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Ephemeral server survived."}}
+[info] >  [ {"user":"[","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ["}}
+[info] >    { {"user":"  {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   {"}}
+[info] >      email: 'zadj99965@gmail.com', {"user":"    email: 'zadj99965@gmail.com',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     email: 'zadj99965@gmail.com',"}}
+[info] >      phone_number: '01030533078', {"user":"    phone_number: '01030533078',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     phone_number: '01030533078',"}}
+[info] >      id: 1648220731259, {"user":"    id: 1648220731259,","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     id: 1648220731259,"}}
+[info] >      date_of_birth: '2461999', {"user":"    date_of_birth: '2461999',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     date_of_birth: '2461999',"}}
+[info] >      first_name: 'ziyad', {"user":"    first_name: 'ziyad',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     first_name: 'ziyad',"}}
+[info] >      last_name: 'aljunaidi', {"user":"    last_name: 'aljunaidi',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     last_name: 'aljunaidi',"}}
+[info] >      password: 'cygaMaw' {"user":"    password: 'cygaMaw'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     password: 'cygaMaw'"}}
+[info] >    } {"user":"  }","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   }"}}
+[info] >  ] {"user":"]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ]"}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-03-26T16:08:08.603Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: IDLE"}}
+[debug] [2022-03-26T16:08:08.603Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-03-26T16:08:11.154Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-26T16:08:11.154Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-26T16:08:11.155Z] Accepted request GET /medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw --> us-central1-api
+[debug] [2022-03-26T16:08:11.155Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-03-26T16:08:11.155Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: Assigning socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\10660 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\10660"}}
+[debug] [2022-03-26T16:08:11.156Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: BUSY"}}
+[debug] [2022-03-26T16:08:11.159Z] [runtime-status] [10660] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-03-26T16:08:11.162Z] [runtime-status] [10660] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Running api in signature http"}}
+[debug] [2022-03-26T16:08:11.162Z] [runtime-status] [10660] Attempting to listen to socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\10660 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\10660"}}
+[debug] [2022-03-26T16:08:11.168Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-26T16:08:11.169Z] [functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw, mapping to path=/signin?email=zadj99965@gmail.com&password=cygaMaw {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw, mapping to path=/signin?email=zadj99965@gmail.com&password=cygaMaw"}}
+[debug] [2022-03-26T16:08:11.173Z] [runtime-status] [10660] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Ephemeral server handling GET request"}}
+[debug] [2022-03-26T16:08:11.174Z] [runtime-status] [10660] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Ephemeral server survived."}}
+[info] >  [ {"user":"[","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ["}}
+[info] >    { {"user":"  {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   {"}}
+[info] >      date_of_birth: '2461999', {"user":"    date_of_birth: '2461999',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     date_of_birth: '2461999',"}}
+[info] >      password: 'cygaMaw', {"user":"    password: 'cygaMaw',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     password: 'cygaMaw',"}}
+[info] >      email: 'zadj99965@gmail.com', {"user":"    email: 'zadj99965@gmail.com',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     email: 'zadj99965@gmail.com',"}}
+[info] >      first_name: 'ziyad', {"user":"    first_name: 'ziyad',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     first_name: 'ziyad',"}}
+[info] >      last_name: 'aljunaidi', {"user":"    last_name: 'aljunaidi',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     last_name: 'aljunaidi',"}}
+[info] >      phone_number: '01030533078', {"user":"    phone_number: '01030533078',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     phone_number: '01030533078',"}}
+[info] >      id: 1648220731259 {"user":"    id: 1648220731259","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     id: 1648220731259"}}
+[info] >    } {"user":"  }","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   }"}}
+[info] >  ] {"user":"]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ]"}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-03-26T16:08:11.509Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: IDLE"}}
+[debug] [2022-03-26T16:08:11.510Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-03-26T16:09:12.344Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-26T16:09:12.345Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-26T16:09:12.345Z] Accepted request GET /medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw --> us-central1-api
+[debug] [2022-03-26T16:09:12.345Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-03-26T16:09:12.346Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: Assigning socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\10660 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\10660"}}
+[debug] [2022-03-26T16:09:12.346Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: BUSY"}}
+[debug] [2022-03-26T16:09:12.347Z] [runtime-status] [10660] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-03-26T16:09:12.350Z] [runtime-status] [10660] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Running api in signature http"}}
+[debug] [2022-03-26T16:09:12.351Z] [runtime-status] [10660] Attempting to listen to socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\10660 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\10660"}}
+[debug] [2022-03-26T16:09:12.354Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-26T16:09:12.355Z] [functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw, mapping to path=/signin?email=zadj99965@gmail.com&password=cygaMaw {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw, mapping to path=/signin?email=zadj99965@gmail.com&password=cygaMaw"}}
+[debug] [2022-03-26T16:09:12.356Z] [runtime-status] [10660] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Ephemeral server handling GET request"}}
+[debug] [2022-03-26T16:09:12.357Z] [runtime-status] [10660] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Ephemeral server survived."}}
+[info] >  [ {"user":"[","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ["}}
+[info] >    { {"user":"  {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   {"}}
+[info] >      id: 1648220731259, {"user":"    id: 1648220731259,","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     id: 1648220731259,"}}
+[info] >      email: 'zadj99965@gmail.com', {"user":"    email: 'zadj99965@gmail.com',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     email: 'zadj99965@gmail.com',"}}
+[info] >      last_name: 'aljunaidi', {"user":"    last_name: 'aljunaidi',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     last_name: 'aljunaidi',"}}
+[info] >      phone_number: '01030533078', {"user":"    phone_number: '01030533078',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     phone_number: '01030533078',"}}
+[info] >      first_name: 'ziyad', {"user":"    first_name: 'ziyad',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     first_name: 'ziyad',"}}
+[info] >      password: 'cygaMaw', {"user":"    password: 'cygaMaw',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     password: 'cygaMaw',"}}
+[info] >      date_of_birth: '2461999' {"user":"    date_of_birth: '2461999'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     date_of_birth: '2461999'"}}
+[info] >    } {"user":"  }","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   }"}}
+[info] >  ] {"user":"]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ]"}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-03-26T16:09:12.727Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: IDLE"}}
+[debug] [2022-03-26T16:09:12.727Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-03-26T16:09:29.865Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-26T16:09:29.865Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-26T16:09:29.865Z] Accepted request GET /medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMAw --> us-central1-api
+[debug] [2022-03-26T16:09:29.865Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-03-26T16:09:29.865Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: Assigning socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\10660 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\10660"}}
+[debug] [2022-03-26T16:09:29.865Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: BUSY"}}
+[debug] [2022-03-26T16:09:29.865Z] [runtime-status] [10660] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-03-26T16:09:29.867Z] [runtime-status] [10660] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Running api in signature http"}}
+[debug] [2022-03-26T16:09:29.867Z] [runtime-status] [10660] Attempting to listen to socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\10660 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\10660"}}
+[debug] [2022-03-26T16:09:29.869Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-26T16:09:29.869Z] [functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMAw, mapping to path=/signin?email=zadj99965@gmail.com&password=cygaMAw {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMAw, mapping to path=/signin?email=zadj99965@gmail.com&password=cygaMAw"}}
+[debug] [2022-03-26T16:09:29.870Z] [runtime-status] [10660] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Ephemeral server handling GET request"}}
+[debug] [2022-03-26T16:09:29.870Z] [runtime-status] [10660] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Ephemeral server survived."}}
+[info] >  [] {"user":[],"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m []"}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-03-26T16:09:30.148Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: IDLE"}}
+[debug] [2022-03-26T16:09:30.148Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-03-26T16:09:52.029Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-26T16:09:52.029Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-26T16:09:52.030Z] Accepted request GET /medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw --> us-central1-api
+[debug] [2022-03-26T16:09:52.030Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-03-26T16:09:52.030Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: Assigning socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\10660 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\10660"}}
+[debug] [2022-03-26T16:09:52.031Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: BUSY"}}
+[debug] [2022-03-26T16:09:52.032Z] [runtime-status] [10660] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-03-26T16:09:52.034Z] [runtime-status] [10660] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Running api in signature http"}}
+[debug] [2022-03-26T16:09:52.035Z] [runtime-status] [10660] Attempting to listen to socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\10660 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\10660"}}
+[debug] [2022-03-26T16:09:52.040Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-26T16:09:52.041Z] [functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw, mapping to path=/signin?email=zadj99965@gmail.com&password=cygaMaw {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw, mapping to path=/signin?email=zadj99965@gmail.com&password=cygaMaw"}}
+[debug] [2022-03-26T16:09:52.044Z] [runtime-status] [10660] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Ephemeral server handling GET request"}}
+[debug] [2022-03-26T16:09:52.045Z] [runtime-status] [10660] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [10660] Ephemeral server survived."}}
+[info] >  [ {"user":"[","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ["}}
+[info] >    { {"user":"  {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   {"}}
+[info] >      id: 1648220731259, {"user":"    id: 1648220731259,","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     id: 1648220731259,"}}
+[info] >      email: 'zadj99965@gmail.com', {"user":"    email: 'zadj99965@gmail.com',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     email: 'zadj99965@gmail.com',"}}
+[info] >      date_of_birth: '2461999', {"user":"    date_of_birth: '2461999',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     date_of_birth: '2461999',"}}
+[info] >      password: 'cygaMaw', {"user":"    password: 'cygaMaw',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     password: 'cygaMaw',"}}
+[info] >      phone_number: '01030533078', {"user":"    phone_number: '01030533078',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     phone_number: '01030533078',"}}
+[info] >      last_name: 'aljunaidi', {"user":"    last_name: 'aljunaidi',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     last_name: 'aljunaidi',"}}
+[info] >      first_name: 'ziyad' {"user":"    first_name: 'ziyad'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     first_name: 'ziyad'"}}
+[info] >    } {"user":"  }","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   }"}}
+[info] >  ] {"user":"]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ]"}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-03-26T16:09:52.344Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: IDLE"}}
+[debug] [2022-03-26T16:09:52.344Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-03-26T16:11:52.920Z] File C:\Users\ziyad\Desktop\Medica.com-Backend\functions\db_calls.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\db_calls.js changed, reloading triggers"}}
+[debug] [2022-03-26T16:11:53.936Z] [worker-pool] Shutting down IDLE worker (us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-api)"}}
+[debug] [2022-03-26T16:11:53.936Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: FINISHING"}}
+[debug] [2022-03-26T16:11:53.939Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2022-03-26T16:11:57.501Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "firebase": "^9.6.8",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "infobip-nodejs": "^0.1.0",
+    "messagebird": "^3.7.2",
+    "mongodb": "^4.2.2",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.7",
+    "request": "^2.88.2",
+    "twilio": "^3.75.1",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-03-26T16:11:57.502Z] Building nodejs source
+[debug] [2022-03-26T16:11:57.502Z] Analyzing nodejs backend spec
+[debug] [2022-03-26T16:11:57.509Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: exited"}}
+[debug] [2022-03-26T16:11:57.509Z] [worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a314f4a2-5796-47cd-aa3a-69de01a1e0b4]: FINISHED"}}
+[debug] [2022-03-26T16:11:57.511Z] File C:\Users\ziyad\Desktop\Medica.com-Backend\functions\db_calls.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\db_calls.js changed, reloading triggers"}}
+[debug] [2022-03-26T16:11:58.526Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2022-03-26T16:12:02.035Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "firebase": "^9.6.8",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "infobip-nodejs": "^0.1.0",
+    "messagebird": "^3.7.2",
+    "mongodb": "^4.2.2",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.7",
+    "request": "^2.88.2",
+    "twilio": "^3.75.1",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-03-26T16:12:02.036Z] Building nodejs source
+[debug] [2022-03-26T16:12:02.036Z] Analyzing nodejs backend spec
+[debug] [2022-03-26T16:13:54.585Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-26T16:13:54.585Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-26T16:13:54.586Z] Accepted request GET /medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw --> us-central1-api
+[debug] [2022-03-26T16:13:54.586Z] [worker-pool] Cleaned up workers for us-central1-api: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-api: 1 --> 0"}}
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2022-03-26T16:13:54.614Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2022-03-26T16:13:54.614Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[debug] [2022-03-26T16:13:54.614Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-03-26T16:13:54.615Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: Assigning socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\1916 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\1916"}}
+[debug] [2022-03-26T16:13:54.615Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: BUSY"}}
+[debug] [2022-03-26T16:13:55.933Z] [runtime-status] [1916] Functions runtime initialized. {"cwd":"C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions","node_version":"14.16.1"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\ziyad\\\\Desktop\\\\Medica.com-Backend\\\\functions\",\"node_version\":\"14.16.1\"}"}}
+[debug] [2022-03-26T16:13:55.937Z] [runtime-status] [1916] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Disabled runtime features: undefined"}}
+[debug] [2022-03-26T16:13:55.939Z] [runtime-status] [1916] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"C:\\\\Users\\\\ziyad\\\\Desktop\\\\Medica.com-Backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2022-03-26T16:13:55.941Z] [runtime-status] [1916] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"C:\\\\Users\\\\ziyad\\\\Desktop\\\\Medica.com-Backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-03-26T16:13:55.941Z] [runtime-status] [1916] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-03-26T16:13:55.942Z] [runtime-status] [1916] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"C:\\\\Users\\\\ziyad\\\\Desktop\\\\Medica.com-Backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-03-26T16:13:55.991Z] [runtime-status] [1916] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-03-26T16:13:55.991Z] [runtime-status] [1916] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.18.1","resolution":"C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\node_modules\\firebase-functions\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"C:\\\\Users\\\\ziyad\\\\Desktop\\\\Medica.com-Backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}}"}}
+[debug] [2022-03-26T16:13:55.992Z] [runtime-status] [1916] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"C:\\\\Users\\\\ziyad\\\\Desktop\\\\Medica.com-Backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-03-26T16:13:55.994Z] [runtime-status] [1916] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"C:\\\\Users\\\\ziyad\\\\Desktop\\\\Medica.com-Backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2022-03-26T16:13:55.994Z] [runtime-status] [1916] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"C:\\\\Users\\\\ziyad\\\\Desktop\\\\Medica.com-Backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-03-26T16:13:55.994Z] [runtime-status] [1916] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.0.2","resolution":"C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"C:\\\\Users\\\\ziyad\\\\Desktop\\\\Medica.com-Backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2022-03-26T16:13:56.420Z] [runtime-status] [1916] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-03-26T16:13:56.421Z] [runtime-status] [1916] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Running api in signature http"}}
+[debug] [2022-03-26T16:13:56.424Z] [runtime-status] [1916] Attempting to listen to socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\1916 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\1916"}}
+[debug] [2022-03-26T16:13:56.427Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-26T16:13:56.427Z] [functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw, mapping to path=/signin?email=zadj99965@gmail.com&password=cygaMaw {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw, mapping to path=/signin?email=zadj99965@gmail.com&password=cygaMaw"}}
+[debug] [2022-03-26T16:13:56.435Z] [runtime-status] [1916] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Ephemeral server handling GET request"}}
+[debug] [2022-03-26T16:13:56.439Z] [runtime-status] [1916] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Ephemeral server survived."}}
+[info] >  [ {"user":"[","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ["}}
+[info] >    { {"user":"  {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   {"}}
+[info] >      last_name: 'aljunaidi', {"user":"    last_name: 'aljunaidi',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     last_name: 'aljunaidi',"}}
+[info] >      phone_number: '01030533078', {"user":"    phone_number: '01030533078',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     phone_number: '01030533078',"}}
+[info] >      first_name: 'ziyad', {"user":"    first_name: 'ziyad',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     first_name: 'ziyad',"}}
+[info] >      email: 'zadj99965@gmail.com', {"user":"    email: 'zadj99965@gmail.com',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     email: 'zadj99965@gmail.com',"}}
+[info] >      date_of_birth: '2461999', {"user":"    date_of_birth: '2461999',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     date_of_birth: '2461999',"}}
+[info] >      password: 'cygaMaw', {"user":"    password: 'cygaMaw',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     password: 'cygaMaw',"}}
+[info] >      id: 1648220731259 {"user":"    id: 1648220731259","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     id: 1648220731259"}}
+[info] >    } {"user":"  }","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   }"}}
+[info] >  ] {"user":"]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ]"}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-03-26T16:13:57.227Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: IDLE"}}
+[debug] [2022-03-26T16:13:57.227Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-03-26T16:14:42.496Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-26T16:14:42.497Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-26T16:14:42.497Z] Accepted request GET /medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw --> us-central1-api
+[debug] [2022-03-26T16:14:42.497Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-03-26T16:14:42.497Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: Assigning socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\1916 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\1916"}}
+[debug] [2022-03-26T16:14:42.497Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: BUSY"}}
+[debug] [2022-03-26T16:14:42.498Z] [runtime-status] [1916] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-03-26T16:14:42.498Z] [runtime-status] [1916] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Running api in signature http"}}
+[debug] [2022-03-26T16:14:42.499Z] [runtime-status] [1916] Attempting to listen to socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\1916 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\1916"}}
+[debug] [2022-03-26T16:14:42.501Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-26T16:14:42.501Z] [functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw, mapping to path=/signin?email=zadj99965@gmail.com&password=cygaMaw {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw, mapping to path=/signin?email=zadj99965@gmail.com&password=cygaMaw"}}
+[debug] [2022-03-26T16:14:42.503Z] [runtime-status] [1916] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Ephemeral server handling GET request"}}
+[debug] [2022-03-26T16:14:42.503Z] [runtime-status] [1916] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Ephemeral server survived."}}
+[info] >  [ {"user":"[","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ["}}
+[info] >    { {"user":"  {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   {"}}
+[info] >      phone_number: '01030533078', {"user":"    phone_number: '01030533078',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     phone_number: '01030533078',"}}
+[info] >      password: 'cygaMaw', {"user":"    password: 'cygaMaw',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     password: 'cygaMaw',"}}
+[info] >      last_name: 'aljunaidi', {"user":"    last_name: 'aljunaidi',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     last_name: 'aljunaidi',"}}
+[info] >      id: 1648220731259, {"user":"    id: 1648220731259,","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     id: 1648220731259,"}}
+[info] >      email: 'zadj99965@gmail.com', {"user":"    email: 'zadj99965@gmail.com',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     email: 'zadj99965@gmail.com',"}}
+[info] >      date_of_birth: '2461999', {"user":"    date_of_birth: '2461999',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     date_of_birth: '2461999',"}}
+[info] >      first_name: 'ziyad' {"user":"    first_name: 'ziyad'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     first_name: 'ziyad'"}}
+[info] >    } {"user":"  }","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   }"}}
+[info] >  ] {"user":"]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ]"}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-03-26T16:14:42.812Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: IDLE"}}
+[debug] [2022-03-26T16:14:42.812Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-03-26T16:15:00.714Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-26T16:15:00.715Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-26T16:15:00.715Z] Accepted request GET /medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw --> us-central1-api
+[debug] [2022-03-26T16:15:00.715Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-03-26T16:15:00.716Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: Assigning socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\1916 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\1916"}}
+[debug] [2022-03-26T16:15:00.716Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: BUSY"}}
+[debug] [2022-03-26T16:15:00.717Z] [runtime-status] [1916] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-03-26T16:15:00.720Z] [runtime-status] [1916] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Running api in signature http"}}
+[debug] [2022-03-26T16:15:00.720Z] [runtime-status] [1916] Attempting to listen to socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\1916 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\1916"}}
+[debug] [2022-03-26T16:15:00.726Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-26T16:15:00.726Z] [functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw, mapping to path=/signin?email=zadj99965@gmail.com&password=cygaMaw {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw, mapping to path=/signin?email=zadj99965@gmail.com&password=cygaMaw"}}
+[debug] [2022-03-26T16:15:00.730Z] [runtime-status] [1916] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Ephemeral server handling GET request"}}
+[debug] [2022-03-26T16:15:00.731Z] [runtime-status] [1916] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Ephemeral server survived."}}
+[info] >  [ {"user":"[","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ["}}
+[info] >    { {"user":"  {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   {"}}
+[info] >      phone_number: '01030533078', {"user":"    phone_number: '01030533078',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     phone_number: '01030533078',"}}
+[info] >      first_name: 'ziyad', {"user":"    first_name: 'ziyad',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     first_name: 'ziyad',"}}
+[info] >      email: 'zadj99965@gmail.com', {"user":"    email: 'zadj99965@gmail.com',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     email: 'zadj99965@gmail.com',"}}
+[info] >      id: 1648220731259, {"user":"    id: 1648220731259,","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     id: 1648220731259,"}}
+[info] >      last_name: 'aljunaidi', {"user":"    last_name: 'aljunaidi',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     last_name: 'aljunaidi',"}}
+[info] >      password: 'cygaMaw', {"user":"    password: 'cygaMaw',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     password: 'cygaMaw',"}}
+[info] >      date_of_birth: '2461999' {"user":"    date_of_birth: '2461999'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     date_of_birth: '2461999'"}}
+[info] >    } {"user":"  }","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   }"}}
+[info] >  ] {"user":"]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ]"}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-03-26T16:15:01.043Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: IDLE"}}
+[debug] [2022-03-26T16:15:01.044Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-03-26T16:54:52.867Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-26T16:54:52.868Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-26T16:54:52.868Z] Accepted request GET /medica72-5933c/us-central1/api/signin?email=omar_arch@gmail.com&password=bnhykice --> us-central1-api
+[debug] [2022-03-26T16:54:52.869Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-03-26T16:54:52.869Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: Assigning socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\1916 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\1916"}}
+[debug] [2022-03-26T16:54:52.869Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: BUSY"}}
+[debug] [2022-03-26T16:54:52.872Z] [runtime-status] [1916] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-03-26T16:54:52.875Z] [runtime-status] [1916] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Running api in signature http"}}
+[debug] [2022-03-26T16:54:52.876Z] [runtime-status] [1916] Attempting to listen to socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\1916 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\1916"}}
+[debug] [2022-03-26T16:54:52.883Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-26T16:54:52.884Z] [functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=omar_arch@gmail.com&password=bnhykice, mapping to path=/signin?email=omar_arch@gmail.com&password=bnhykice {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=omar_arch@gmail.com&password=bnhykice, mapping to path=/signin?email=omar_arch@gmail.com&password=bnhykice"}}
+[debug] [2022-03-26T16:54:52.888Z] [runtime-status] [1916] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Ephemeral server handling GET request"}}
+[debug] [2022-03-26T16:54:52.889Z] [runtime-status] [1916] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Ephemeral server survived."}}
+[info] >  [ {"user":"[","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ["}}
+[info] >    { {"user":"  {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   {"}}
+[info] >      id: '18003', {"user":"    id: '18003',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     id: '18003',"}}
+[info] >      email: 'omar_arch@gmail.com', {"user":"    email: 'omar_arch@gmail.com',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     email: 'omar_arch@gmail.com',"}}
+[info] >      phone_number: '01003767413', {"user":"    phone_number: '01003767413',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     phone_number: '01003767413',"}}
+[info] >      'first_name  ': 'omar ', {"user":"    'first_name  ': 'omar ',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     'first_name  ': 'omar ',"}}
+[info] >      'last_name    ': 'hussin', {"user":"    'last_name    ': 'hussin',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     'last_name    ': 'hussin',"}}
+[info] >      password: 'bnhykice' {"user":"    password: 'bnhykice'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     password: 'bnhykice'"}}
+[info] >    } {"user":"  }","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   }"}}
+[info] >  ] {"user":"]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ]"}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-03-26T16:54:53.405Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: IDLE"}}
+[debug] [2022-03-26T16:54:53.406Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-03-26T16:55:30.276Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-26T16:55:30.277Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-26T16:55:30.277Z] Accepted request GET /medica72-5933c/us-central1/api/signin?email=tez_el2ot@gmail.com&password=metroexodus2035 --> us-central1-api
+[debug] [2022-03-26T16:55:30.277Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-03-26T16:55:30.277Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: Assigning socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\1916 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\1916"}}
+[debug] [2022-03-26T16:55:30.277Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: BUSY"}}
+[debug] [2022-03-26T16:55:30.278Z] [runtime-status] [1916] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-03-26T16:55:30.279Z] [runtime-status] [1916] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Running api in signature http"}}
+[debug] [2022-03-26T16:55:30.279Z] [runtime-status] [1916] Attempting to listen to socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\1916 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\1916"}}
+[debug] [2022-03-26T16:55:30.281Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-26T16:55:30.281Z] [functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=tez_el2ot@gmail.com&password=metroexodus2035, mapping to path=/signin?email=tez_el2ot@gmail.com&password=metroexodus2035 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=tez_el2ot@gmail.com&password=metroexodus2035, mapping to path=/signin?email=tez_el2ot@gmail.com&password=metroexodus2035"}}
+[debug] [2022-03-26T16:55:30.282Z] [runtime-status] [1916] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Ephemeral server handling GET request"}}
+[debug] [2022-03-26T16:55:30.282Z] [runtime-status] [1916] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Ephemeral server survived."}}
+[info] >  [] {"user":[],"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m []"}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-03-26T16:55:30.577Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: IDLE"}}
+[debug] [2022-03-26T16:55:30.578Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-03-26T16:56:29.256Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-26T16:56:29.256Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-26T16:56:29.256Z] Accepted request GET /medica72-5933c/us-central1/api/signin?email=zyad119000043@cs.modern-academy.edu.eg&password=ssssss --> us-central1-api
+[debug] [2022-03-26T16:56:29.256Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-03-26T16:56:29.256Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: Assigning socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\1916 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\1916"}}
+[debug] [2022-03-26T16:56:29.256Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: BUSY"}}
+[debug] [2022-03-26T16:56:29.257Z] [runtime-status] [1916] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-03-26T16:56:29.257Z] [runtime-status] [1916] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Running api in signature http"}}
+[debug] [2022-03-26T16:56:29.258Z] [runtime-status] [1916] Attempting to listen to socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\1916 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\1916"}}
+[debug] [2022-03-26T16:56:29.259Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-26T16:56:29.260Z] [functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zyad119000043@cs.modern-academy.edu.eg&password=ssssss, mapping to path=/signin?email=zyad119000043@cs.modern-academy.edu.eg&password=ssssss {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zyad119000043@cs.modern-academy.edu.eg&password=ssssss, mapping to path=/signin?email=zyad119000043@cs.modern-academy.edu.eg&password=ssssss"}}
+[debug] [2022-03-26T16:56:29.261Z] [runtime-status] [1916] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Ephemeral server handling GET request"}}
+[debug] [2022-03-26T16:56:29.261Z] [runtime-status] [1916] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Ephemeral server survived."}}
+[info] >  [] {"user":[],"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m []"}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-03-26T16:56:29.547Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: IDLE"}}
+[debug] [2022-03-26T16:56:29.547Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-03-26T16:56:44.365Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-26T16:56:44.365Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-26T16:56:44.365Z] Accepted request GET /medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw --> us-central1-api
+[debug] [2022-03-26T16:56:44.365Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-03-26T16:56:44.366Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: Assigning socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\1916 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\1916"}}
+[debug] [2022-03-26T16:56:44.366Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: BUSY"}}
+[debug] [2022-03-26T16:56:44.366Z] [runtime-status] [1916] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-03-26T16:56:44.367Z] [runtime-status] [1916] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Running api in signature http"}}
+[debug] [2022-03-26T16:56:44.367Z] [runtime-status] [1916] Attempting to listen to socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\1916 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\1916"}}
+[debug] [2022-03-26T16:56:44.369Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-26T16:56:44.369Z] [functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw, mapping to path=/signin?email=zadj99965@gmail.com&password=cygaMaw {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zadj99965@gmail.com&password=cygaMaw, mapping to path=/signin?email=zadj99965@gmail.com&password=cygaMaw"}}
+[debug] [2022-03-26T16:56:44.371Z] [runtime-status] [1916] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Ephemeral server handling GET request"}}
+[debug] [2022-03-26T16:56:44.371Z] [runtime-status] [1916] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Ephemeral server survived."}}
+[info] >  [ {"user":"[","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ["}}
+[info] >    { {"user":"  {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   {"}}
+[info] >      last_name: 'aljunaidi', {"user":"    last_name: 'aljunaidi',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     last_name: 'aljunaidi',"}}
+[info] >      id: 1648220731259, {"user":"    id: 1648220731259,","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     id: 1648220731259,"}}
+[info] >      phone_number: '01030533078', {"user":"    phone_number: '01030533078',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     phone_number: '01030533078',"}}
+[info] >      email: 'zadj99965@gmail.com', {"user":"    email: 'zadj99965@gmail.com',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     email: 'zadj99965@gmail.com',"}}
+[info] >      first_name: 'ziyad', {"user":"    first_name: 'ziyad',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     first_name: 'ziyad',"}}
+[info] >      password: 'cygaMaw', {"user":"    password: 'cygaMaw',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     password: 'cygaMaw',"}}
+[info] >      date_of_birth: '2461999' {"user":"    date_of_birth: '2461999'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     date_of_birth: '2461999'"}}
+[info] >    } {"user":"  }","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   }"}}
+[info] >  ] {"user":"]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ]"}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-03-26T16:56:44.682Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: IDLE"}}
+[debug] [2022-03-26T16:56:44.682Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-03-26T16:57:42.729Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-26T16:57:42.730Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-26T16:57:42.730Z] Accepted request GET /medica72-5933c/us-central1/api/signin?email=zadj9965@gmail.com&password=cygaMawfsdfsdfsdf --> us-central1-api
+[debug] [2022-03-26T16:57:42.730Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-03-26T16:57:42.731Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: Assigning socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\1916 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\1916"}}
+[debug] [2022-03-26T16:57:42.731Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: BUSY"}}
+[debug] [2022-03-26T16:57:42.732Z] [runtime-status] [1916] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-03-26T16:57:42.735Z] [runtime-status] [1916] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Running api in signature http"}}
+[debug] [2022-03-26T16:57:42.736Z] [runtime-status] [1916] Attempting to listen to socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\1916 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\1916"}}
+[debug] [2022-03-26T16:57:42.741Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-26T16:57:42.742Z] [functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zadj9965@gmail.com&password=cygaMawfsdfsdfsdf, mapping to path=/signin?email=zadj9965@gmail.com&password=cygaMawfsdfsdfsdf {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zadj9965@gmail.com&password=cygaMawfsdfsdfsdf, mapping to path=/signin?email=zadj9965@gmail.com&password=cygaMawfsdfsdfsdf"}}
+[debug] [2022-03-26T16:57:42.747Z] [runtime-status] [1916] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Ephemeral server handling GET request"}}
+[debug] [2022-03-26T16:57:42.748Z] [runtime-status] [1916] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Ephemeral server survived."}}
+[info] >  [] {"user":[],"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m []"}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-03-26T16:57:43.062Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: IDLE"}}
+[debug] [2022-03-26T16:57:43.062Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-03-26T16:58:01.397Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-26T16:58:01.398Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-26T16:58:01.398Z] Accepted request GET /medica72-5933c/us-central1/api/signin?email=tezEl2ot@gmaitl.com&password=metrotez --> us-central1-api
+[debug] [2022-03-26T16:58:01.398Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-03-26T16:58:01.398Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: Assigning socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\1916 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\1916"}}
+[debug] [2022-03-26T16:58:01.398Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: BUSY"}}
+[debug] [2022-03-26T16:58:01.399Z] [runtime-status] [1916] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-03-26T16:58:01.399Z] [runtime-status] [1916] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Running api in signature http"}}
+[debug] [2022-03-26T16:58:01.399Z] [runtime-status] [1916] Attempting to listen to socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\1916 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\1916"}}
+[debug] [2022-03-26T16:58:01.401Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-26T16:58:01.402Z] [functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=tezEl2ot@gmaitl.com&password=metrotez, mapping to path=/signin?email=tezEl2ot@gmaitl.com&password=metrotez {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=tezEl2ot@gmaitl.com&password=metrotez, mapping to path=/signin?email=tezEl2ot@gmaitl.com&password=metrotez"}}
+[debug] [2022-03-26T16:58:01.403Z] [runtime-status] [1916] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Ephemeral server handling GET request"}}
+[debug] [2022-03-26T16:58:01.403Z] [runtime-status] [1916] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Ephemeral server survived."}}
+[info] >  [] {"user":[],"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m []"}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-03-26T16:58:01.721Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: IDLE"}}
+[debug] [2022-03-26T16:58:01.722Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-03-26T16:59:12.961Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-26T16:59:12.961Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-26T16:59:12.962Z] Accepted request GET /medica72-5933c/us-central1/api/signin?email=zeezoomagic999@gmail.com&password=sssssss --> us-central1-api
+[debug] [2022-03-26T16:59:12.962Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-03-26T16:59:12.962Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: Assigning socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\1916 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\1916"}}
+[debug] [2022-03-26T16:59:12.963Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: BUSY"}}
+[debug] [2022-03-26T16:59:12.964Z] [runtime-status] [1916] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-03-26T16:59:12.967Z] [runtime-status] [1916] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Running api in signature http"}}
+[debug] [2022-03-26T16:59:12.968Z] [runtime-status] [1916] Attempting to listen to socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\1916 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\1916"}}
+[debug] [2022-03-26T16:59:12.973Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-26T16:59:12.974Z] [functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zeezoomagic999@gmail.com&password=sssssss, mapping to path=/signin?email=zeezoomagic999@gmail.com&password=sssssss {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=zeezoomagic999@gmail.com&password=sssssss, mapping to path=/signin?email=zeezoomagic999@gmail.com&password=sssssss"}}
+[debug] [2022-03-26T16:59:12.977Z] [runtime-status] [1916] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Ephemeral server handling GET request"}}
+[debug] [2022-03-26T16:59:12.978Z] [runtime-status] [1916] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Ephemeral server survived."}}
+[info] >  [] {"user":[],"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m []"}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-03-26T16:59:13.471Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: IDLE"}}
+[debug] [2022-03-26T16:59:13.471Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-03-26T16:59:36.603Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-26T16:59:36.604Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-26T16:59:36.604Z] Accepted request GET /medica72-5933c/us-central1/api/signin?email=ziadamin@gmail.com&password=zoyzfpad --> us-central1-api
+[debug] [2022-03-26T16:59:36.604Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-03-26T16:59:36.604Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: Assigning socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\1916 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\1916"}}
+[debug] [2022-03-26T16:59:36.604Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: BUSY"}}
+[debug] [2022-03-26T16:59:36.604Z] [runtime-status] [1916] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-03-26T16:59:36.605Z] [runtime-status] [1916] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Running api in signature http"}}
+[debug] [2022-03-26T16:59:36.605Z] [runtime-status] [1916] Attempting to listen to socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\1916 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\1916"}}
+[debug] [2022-03-26T16:59:36.607Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-26T16:59:36.607Z] [functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=ziadamin@gmail.com&password=zoyzfpad, mapping to path=/signin?email=ziadamin@gmail.com&password=zoyzfpad {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=ziadamin@gmail.com&password=zoyzfpad, mapping to path=/signin?email=ziadamin@gmail.com&password=zoyzfpad"}}
+[debug] [2022-03-26T16:59:36.608Z] [runtime-status] [1916] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Ephemeral server handling GET request"}}
+[debug] [2022-03-26T16:59:36.608Z] [runtime-status] [1916] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Ephemeral server survived."}}
+[info] >  [ {"user":"[","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ["}}
+[info] >    { {"user":"  {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   {"}}
+[info] >      id: '18006', {"user":"    id: '18006',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     id: '18006',"}}
+[info] >      phone_number: '01067333409', {"user":"    phone_number: '01067333409',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     phone_number: '01067333409',"}}
+[info] >      email: 'ziadamin@gmail.com', {"user":"    email: 'ziadamin@gmail.com',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     email: 'ziadamin@gmail.com',"}}
+[info] >      'first_name  ': 'ziad ', {"user":"    'first_name  ': 'ziad ',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     'first_name  ': 'ziad ',"}}
+[info] >      password: 'zoyzfpad', {"user":"    password: 'zoyzfpad',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     password: 'zoyzfpad',"}}
+[info] >      'last_name    ': 'gehad' {"user":"    'last_name    ': 'gehad'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     'last_name    ': 'gehad'"}}
+[info] >    } {"user":"  }","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   }"}}
+[info] >  ] {"user":"]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ]"}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-03-26T16:59:36.989Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: IDLE"}}
+[debug] [2022-03-26T16:59:36.990Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-03-26T17:01:14.442Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-26T17:01:14.442Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-26T17:01:14.443Z] Accepted request GET /medica72-5933c/us-central1/api/signin?email=bta3magdy@gmail.com&password=magdy555 --> us-central1-api
+[debug] [2022-03-26T17:01:14.443Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-03-26T17:01:14.443Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: Assigning socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\1916 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\1916"}}
+[debug] [2022-03-26T17:01:14.443Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: BUSY"}}
+[debug] [2022-03-26T17:01:14.443Z] [runtime-status] [1916] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-03-26T17:01:14.445Z] [runtime-status] [1916] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Running api in signature http"}}
+[debug] [2022-03-26T17:01:14.445Z] [runtime-status] [1916] Attempting to listen to socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\1916 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\1916"}}
+[debug] [2022-03-26T17:01:14.449Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-26T17:01:14.449Z] [functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=bta3magdy@gmail.com&password=magdy555, mapping to path=/signin?email=bta3magdy@gmail.com&password=magdy555 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=bta3magdy@gmail.com&password=magdy555, mapping to path=/signin?email=bta3magdy@gmail.com&password=magdy555"}}
+[debug] [2022-03-26T17:01:14.451Z] [runtime-status] [1916] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Ephemeral server handling GET request"}}
+[debug] [2022-03-26T17:01:14.451Z] [runtime-status] [1916] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Ephemeral server survived."}}
+[info] >  [ {"user":"[","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ["}}
+[info] >    { {"user":"  {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   {"}}
+[info] >      id: '18022', {"user":"    id: '18022',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     id: '18022',"}}
+[info] >      password: 'magdy555', {"user":"    password: 'magdy555',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     password: 'magdy555',"}}
+[info] >      first_name: 'ziyad ', {"user":"    first_name: 'ziyad ',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     first_name: 'ziyad ',"}}
+[info] >      phone_number: '01124554658', {"user":"    phone_number: '01124554658',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     phone_number: '01124554658',"}}
+[info] >      last_name: 'magdy ', {"user":"    last_name: 'magdy ',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     last_name: 'magdy ',"}}
+[info] >      email: 'bta3magdy@gmail.com' {"user":"    email: 'bta3magdy@gmail.com'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m     email: 'bta3magdy@gmail.com'"}}
+[info] >    } {"user":"  }","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m   }"}}
+[info] >  ] {"user":"]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m ]"}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-03-26T17:01:14.943Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: IDLE"}}
+[debug] [2022-03-26T17:01:14.943Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-03-26T17:01:34.005Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-26T17:01:34.005Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-26T17:01:34.005Z] Accepted request GET /medica72-5933c/us-central1/api/signin?email=bta3magsdy@gmail.com&password=magdy555 --> us-central1-api
+[debug] [2022-03-26T17:01:34.005Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-03-26T17:01:34.005Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: Assigning socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\1916 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\1916"}}
+[debug] [2022-03-26T17:01:34.005Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: BUSY"}}
+[debug] [2022-03-26T17:01:34.005Z] [runtime-status] [1916] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-03-26T17:01:34.006Z] [runtime-status] [1916] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Running api in signature http"}}
+[debug] [2022-03-26T17:01:34.006Z] [runtime-status] [1916] Attempting to listen to socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\1916 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\1916"}}
+[debug] [2022-03-26T17:01:34.008Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-26T17:01:34.008Z] [functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=bta3magsdy@gmail.com&password=magdy555, mapping to path=/signin?email=bta3magsdy@gmail.com&password=magdy555 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=bta3magsdy@gmail.com&password=magdy555, mapping to path=/signin?email=bta3magsdy@gmail.com&password=magdy555"}}
+[debug] [2022-03-26T17:01:34.009Z] [runtime-status] [1916] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Ephemeral server handling GET request"}}
+[debug] [2022-03-26T17:01:34.009Z] [runtime-status] [1916] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Ephemeral server survived."}}
+[info] >  [] {"user":[],"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m []"}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-03-26T17:01:34.319Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: IDLE"}}
+[debug] [2022-03-26T17:01:34.320Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-03-26T17:02:12.586Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-26T17:02:12.586Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-26T17:02:12.586Z] Accepted request GET /medica72-5933c/us-central1/api/signin?email=bta3magsdy@gmail.com&password=magdy555 --> us-central1-api
+[debug] [2022-03-26T17:02:12.586Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-03-26T17:02:12.586Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: Assigning socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\1916 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: Assigning socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\1916"}}
+[debug] [2022-03-26T17:02:12.586Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: BUSY"}}
+[debug] [2022-03-26T17:02:12.587Z] [runtime-status] [1916] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-03-26T17:02:12.588Z] [runtime-status] [1916] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Running api in signature http"}}
+[debug] [2022-03-26T17:02:12.589Z] [runtime-status] [1916] Attempting to listen to socketPath: \\?\pipe\C:\Users\ziyad\Desktop\Medica.com-Backend\functions\1916 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Attempting to listen to socketPath: \\\\?\\pipe\\C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\1916"}}
+[debug] [2022-03-26T17:02:12.591Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-26T17:02:12.591Z] [functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=bta3magsdy@gmail.com&password=magdy555, mapping to path=/signin?email=bta3magsdy@gmail.com&password=magdy555 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/medica72-5933c/us-central1/api/signin?email=bta3magsdy@gmail.com&password=magdy555, mapping to path=/signin?email=bta3magsdy@gmail.com&password=magdy555"}}
+[debug] [2022-03-26T17:02:12.593Z] [runtime-status] [1916] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Ephemeral server handling GET request"}}
+[debug] [2022-03-26T17:02:12.593Z] [runtime-status] [1916] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [1916] Ephemeral server survived."}}
+[info] >  [] {"user":[],"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m []"}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-03-26T17:02:12.941Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: IDLE"}}
+[debug] [2022-03-26T17:02:12.942Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-03-26T17:12:24.368Z] File C:\Users\ziyad\Desktop\Medica.com-Backend\functions\database_manipulation.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\\database_manipulation.js changed, reloading triggers"}}
+[debug] [2022-03-26T17:12:25.376Z] [worker-pool] Shutting down IDLE worker (us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-api)"}}
+[debug] [2022-03-26T17:12:25.377Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: FINISHING"}}
+[debug] [2022-03-26T17:12:25.382Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2022-03-26T17:12:29.021Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "firebase": "^9.6.8",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "infobip-nodejs": "^0.1.0",
+    "messagebird": "^3.7.2",
+    "mongodb": "^4.2.2",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.7",
+    "request": "^2.88.2",
+    "twilio": "^3.75.1",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-03-26T17:12:29.021Z] Building nodejs source
+[debug] [2022-03-26T17:12:29.021Z] Analyzing nodejs backend spec
+[debug] [2022-03-26T17:12:29.028Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: exited"}}
+[debug] [2022-03-26T17:12:29.028Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: FINISHED"}}

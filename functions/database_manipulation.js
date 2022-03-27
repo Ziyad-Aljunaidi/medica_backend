@@ -42,7 +42,7 @@ async function findListings(operation, arg) {
     }
 }
 
-// -----Add functions that make DB calls here-----
+// -----Add functions that make DB calls here----- 
 
 // Function to read collection in the database
 async function listDatabases(client){
