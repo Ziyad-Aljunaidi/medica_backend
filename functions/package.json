@@ -21,13 +21,12 @@
     "firebase": "^9.6.8",
     "firebase-admin": "^10.0.2",
     "firebase-functions": "^3.18.0",
-    "infobip-nodejs": "^0.1.0",
     "messagebird": "^3.7.2",
     "mongodb": "^4.2.2",
     "morgan": "^1.10.0",
     "node-fetch": "^2.6.7",
+    "node-schedule": "^2.1.0",
     "request": "^2.88.2",
-    "twilio": "^3.75.1",
     "url": "^0.11.0"
   },
   "devDependencies": {

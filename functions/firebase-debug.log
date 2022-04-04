@@ -825,3 +825,36 @@
 [debug] [2022-03-26T17:12:29.021Z] Analyzing nodejs backend spec
 [debug] [2022-03-26T17:12:29.028Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: exited"}}
 [debug] [2022-03-26T17:12:29.028Z] [worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-725fffd9-efca-4567-a37d-ece3fec7e7e9]: FINISHED"}}
+[debug] [2022-03-27T04:41:51.454Z] ----------------------------------------------------------------------
+[debug] [2022-03-27T04:41:51.456Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ziyad\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2022-03-27T04:41:51.456Z] CLI Version:   10.5.0
+[debug] [2022-03-27T04:41:51.456Z] Platform:      win32
+[debug] [2022-03-27T04:41:51.456Z] Node Version:  v14.16.1
+[debug] [2022-03-27T04:41:51.457Z] Time:          Sun Mar 27 2022 06:41:51 GMT+0200 (Eastern European Standard Time)
+[debug] [2022-03-27T04:41:51.457Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-03-27T04:41:51.521Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-03-27T04:41:51.521Z] > authorizing via signed-in user (ziyad.al.junaidi@gmail.com)
+[debug] [2022-03-27T04:41:51.521Z] [iam] checking project medica72-5933c for permissions ["firebase.projects.get"]
+[debug] [2022-03-27T04:41:51.522Z] > refreshing access token with scopes: []
+[debug] [2022-03-27T04:41:51.523Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-03-27T04:41:52.004Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Sun, 27 Mar 2022 04:41:53 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-03-27T04:41:52.030Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/medica72-5933c:testIamPermissions [none]
+[debug] [2022-03-27T04:41:52.031Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/medica72-5933c:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-03-27T04:41:53.063Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/medica72-5933c:testIamPermissions 200
+[debug] [2022-03-27T04:41:53.064Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/medica72-5933c:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-03-27T04:41:53.067Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/medica72-5933c [none]
+[debug] [2022-03-27T04:41:53.629Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/medica72-5933c 200
+[debug] [2022-03-27T04:41:53.630Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/medica72-5933c {"projectId":"medica72-5933c","projectNumber":"814793286058","displayName":"medica72","name":"projects/medica72-5933c","resources":{"hostingSite":"medica72-5933c","storageBucket":"medica72-5933c.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] 
+[info] === Serving from 'C:\Users\ziyad\Desktop\Medica.com-Backend'...
+[info] 
+[warn] !  Your requested "node" version "16" doesn't match your global version "14". Using node@14 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"16\" doesn't match your global version \"14\". Using node@14 from host."}}
+[debug] [2022-03-27T04:41:53.663Z] defaultcredentials: writing to file C:\Users\ziyad\AppData\Roaming\firebase\ziyad_al.junaidi_gmail.com_application_default_credentials.json
+[debug] [2022-03-27T04:41:53.666Z] Setting GAC to C:\Users\ziyad\AppData\Roaming\firebase\ziyad_al.junaidi_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\ziyad\\AppData\\Roaming\\firebase\\ziyad_al.junaidi_gmail.com_application_default_credentials.json"}}
+[debug] [2022-03-27T04:41:53.667Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/medica72-5933c/adminSdkConfig [none]
+[debug] [2022-03-27T04:41:54.115Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/medica72-5933c/adminSdkConfig 200
+[debug] [2022-03-27T04:41:54.115Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/medica72-5933c/adminSdkConfig {"projectId":"medica72-5933c","storageBucket":"medica72-5933c.appspot.com","locationId":"us-central"}
+[info] i  functions: Watching "C:\Users\ziyad\Desktop\Medica.com-Backend\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\ziyad\\Desktop\\Medica.com-Backend\\functions\" for Cloud Functions..."}}
+[debug] [2022-03-27T04:41:54.159Z] Validating nodejs source
