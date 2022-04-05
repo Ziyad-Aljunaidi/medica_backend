@@ -24,7 +24,7 @@ const db = getFr.getFirestore();
 let dateObj = Date.now();
 
 async function queryDoctor(doctorId) {
-  let resultData = "tezk 7mra";
+  let resultData = "default data tests";
   const queryDoc = await getFr.getDocs(getFr.collection(db, "doctors"));
 
   queryDoc.forEach((doc) => {
@@ -94,7 +94,7 @@ async function setAppointments(doc_id, user_id, user_time, status_code) {
     });
   }
 }
-// setAppointments("17006", "66666", "6:69","1");
+//setAppointments("17031", "666s66", "6:69","1");
 
 async function appointmentsToHistory(doc_id) {
   const docRef = getFr.doc(db, "appointments", doc_id);
@@ -107,7 +107,7 @@ async function appointmentsToHistory(doc_id) {
     patients: documentData,
   };
 
-  console.log(patients_list);
+  //console.log(patients_list);
   try {
     await getFr.updateDoc(getFr.doc(db, "history_appointments", doc_id), {
       history: getFr.arrayUnion(patients_list),
@@ -122,6 +122,24 @@ async function appointmentsToHistory(doc_id) {
   }
 }
 //appointmentsToHistory("17005");
+
+async function getDocIdApp() {
+  const query_user = await getFr.getDocs(getFr.collection(db, "appointments"));
+  query_user.forEach((doc) => {
+    //console.log(doc.id)
+    appointmentsToHistory(doc.id);
+  });
+}
+//getDocIdApp();
+
+async function readHistory(doc_id) {
+  const docRef = getFr.doc(db, "history_appointments", doc_id);
+  const docSnap = await getFr.getDoc(docRef);
+  let documentData = docSnap.data().history;
+  //console.log(JSON.stringify(documentData))
+  return documentData;
+}
+//readHistory("17002")
 
 async function AddUsersData(users_db) {
   try {
@@ -181,4 +199,6 @@ module.exports = {
   getAppointments,
   setAppointments,
   appointmentsToHistory,
+  readHistory,
+  getDocIdApp,
 };

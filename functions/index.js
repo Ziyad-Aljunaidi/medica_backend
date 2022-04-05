@@ -3,7 +3,7 @@ const functions = require("firebase-functions");
 require('dotenv').config();
 const express = require("express");
 const db_calls = require("./db_calls.js");
-
+const schedule = require("node-schedule");
 const api = express();
 var url = require("url");
 const database_manipulation = require("./database_manipulation.js")
@@ -70,6 +70,12 @@ async function send_comfirmation_test(doc_id, usr_name, user_phonenumber, user_t
   send_sms.sendMsgDemo(doc_data.name, doc_data.address, doc_data.google_map,usr_name, user_phonenumber, user_time)
 }
 
+function moveToHistory(){
+  schedule.scheduleJob('0 23 * * *', () => {db_calls.getDocIdApp()});
+}
+moveToHistory()
+
+//db_calls.getDocIdApp()
 api.get("/", (req, res) =>{
   res.send("WELCOME TO MEDICA72.COM API")
   console.log("testing route ;)")
@@ -163,6 +169,15 @@ api.get("/getUser", (req,res) =>{
   let user_token = req.query.user_token
   db_calls.queryUser(user_token).then((result) =>{
     res.json(result);
+    console.log(result);
+  })
+})
+
+api.get("/appointments_history", (req,res) => {
+  let queries = req.query;
+  let doc_id = queries.doc_id;
+  db_calls.readHistory(doc_id).then((result) => {
+    res.json(result)
     console.log(result);
   })
 })
