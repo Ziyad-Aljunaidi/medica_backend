@@ -35,6 +35,19 @@ async function queryDoctor(doctorId) {
   return resultData;
 }
 
+// async function loop_docs_rating(doc){
+//   // let doc_id_list = []
+// 
+//   const queryDoc = await getFr.getDocs(getFr.collection(db, "doctors"));
+//   queryDoc.forEach((doc) => {
+//     //doc_id_list.push(doc.data().id)
+//     setRatings(doc.data().id, "18007", "3")
+//     console.log(doc.data().id)
+//   })
+// 
+// }
+// loop_docs_rating("aa")
+
 async function queryUser(userId) {
   let resultData = "tezk 7mra";
   const query_user = await getFr.getDocs(getFr.collection(db, "users"));
@@ -171,7 +184,7 @@ async function setRatingToPatient(doc_id, user_id, doc_rate) {
     console.log(err);
   }
 }
-setRatingToPatient("17001", "18006", "9");
+//setRatingToPatient("17001", "18006", "9");
 
 async function getRatings(doc_id) {
   const docRef = getFr.doc(db, "ratings", doc_id);
