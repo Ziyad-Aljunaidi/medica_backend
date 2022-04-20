@@ -94,7 +94,7 @@ async function setAppointments(doc_id, user_id, user_time, status_code) {
     });
   }
 }
-//setAppointments("17031", "666s66", "6:69","1");
+//setAppointments("17029", "18005", "6:00","1");
 
 async function appointmentsToHistory(doc_id) {
   const docRef = getFr.doc(db, "appointments", doc_id);
@@ -123,6 +123,136 @@ async function appointmentsToHistory(doc_id) {
 }
 //appointmentsToHistory("17005");
 
+async function getRatingToPatient(user_id){
+  const docRef = getFr.doc(db, "ratingToPatient", user_id);
+  const docSnap = await getFr.getDoc(docRef);
+  //console.log(docSnap.data())
+  return docSnap.data();
+}
+//getRatingToPatient("18002")
+
+async function setRatingToPatient(doc_id, user_id, doc_rate) {
+  let doc_rating_obj = {
+    doctor_id: doc_id,
+    doctor_rating:doc_rate,
+  };
+
+  // Check if the doctor rated this user previously
+  try{
+    await getRatingToPatient(user_id).then(async (result) => {
+      console.log(result);
+      
+      for (let i = 0; i < result.ratings.length; i++) {
+        if (result.ratings[i].doctor_id == doc_id) {
+          console.log(result.ratings[i].doctor_id);
+          await getFr.updateDoc(getFr.doc(db, "ratingToPatient", user_id), {
+            ratings: getFr.arrayRemove(result.ratings[i]),
+          });
+        }
+      }
+    });
+  }catch(err){
+    console.log("New Rating..")
+  }
+
+
+  try {
+    await getFr.updateDoc(getFr.doc(db, "ratingToPatient", user_id), {
+      ratings: getFr.arrayUnion(doc_rating_obj),
+      //ratings: getFr.arrayRemove({user_id: "18006",user_rating:"5"}),
+    });
+    console.log("Already Present");
+  } catch (err) {
+    console.log(err);
+    await getFr.setDoc(getFr.doc(db, "ratingToPatient", user_id), {
+      ratings: getFr.arrayUnion(doc_rating_obj),
+    });
+    console.log("New..");
+    console.log(err);
+  }
+}
+setRatingToPatient("17001", "18006", "9");
+
+async function getRatings(doc_id) {
+  const docRef = getFr.doc(db, "ratings", doc_id);
+  const docSnap = await getFr.getDoc(docRef);
+  // console.log(docSnap.data())
+  //query.forEach((doc) => {
+  //  //console.log("hah")
+  //  console.log(doc);
+  //});
+  return docSnap.data();
+}
+//getRatings("17002")
+
+async function setRatings(doc_id, user_id, user_rate) {
+  let user_rating_obj = {
+    user_id: user_id,
+    user_rating: user_rate,
+  };
+
+  // Check if the user rated this doctor previously
+  try{
+    await getRatings(doc_id).then(async (result) => {
+      console.log(result);
+      for (let i = 0; i < result.ratings.length; i++) {
+        if (result.ratings[i].user_id == user_id) {
+          console.log(result.ratings[i].user_id);
+          await getFr.updateDoc(getFr.doc(db, "ratings", doc_id), {
+            ratings: getFr.arrayRemove(result.ratings[i]),
+          });
+        }
+      }
+    });
+  } catch(err){
+    console.log("New Rating...")
+  }
+
+
+  try {
+    await getFr.updateDoc(getFr.doc(db, "ratings", doc_id), {
+      ratings: getFr.arrayUnion(user_rating_obj),
+      //ratings: getFr.arrayRemove({user_id: "18006",user_rating:"5"}),
+    });
+    console.log("Already Present");
+  } catch (err) {
+    console.log(err);
+    await getFr.setDoc(getFr.doc(db, "ratings", doc_id), {
+      ratings: getFr.arrayUnion(user_rating_obj),
+    });
+    console.log("New..");
+    console.log(err);
+  }
+}
+// setRatings("17001", "18006", "5");
+
+async function getReviews(doc_id) {
+  const docRef = getFr.doc(db, "reviews", doc_id);
+  const docSnap = await getFr.getDoc(docRef);
+  console.log(docSnap.data());
+  return docSnap.data();
+}
+// getReviews("17002")
+
+async function setReviews(doc_id, user_id, user_review) {
+  user_review_obj = {
+    user_id: user_id,
+    user_review: user_review,
+  };
+  try {
+    await getFr.updateDoc(getFr.doc(db, "reviews", doc_id), {
+      ratings: getFr.arrayUnion(user_review_obj),
+    });
+  } catch (err) {
+    //console.log(err);
+    await getFr.setDoc(getFr.doc(db, "reviews", doc_id), {
+      ratings: getFr.arrayUnion(user_review_obj),
+    });
+  }
+}
+// setReviews("17002","18001","man this doc is the best")
+
+// GETING Doctor ID in appointments
 async function getDocIdApp() {
   const query_user = await getFr.getDocs(getFr.collection(db, "appointments"));
   query_user.forEach((doc) => {
@@ -201,4 +331,8 @@ module.exports = {
   appointmentsToHistory,
   readHistory,
   getDocIdApp,
+  getRatings, // doc_id
+  setRatings, // doc_id user_id user_rating
+  getReviews, // doc_id
+  setReviews, // doc_id user_id user_review
 };

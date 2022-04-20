@@ -133,6 +133,7 @@ api.get("/verify", (req, res) => {
   let user_phone = urlQuery.user_phone;
   let user_date = urlQuery.user_date;
   send_comfirmation_test(doc_id, user_name, user_phone, user_date)
+  //db_calls.setAppointments(doc_id,user_id,user_time, status_code)
 })
 
 
@@ -183,6 +184,51 @@ api.get("/appointments_history", (req,res) => {
 })
 // app.listen(port, () => console.log(`Example app listening on port ${port}!`)); // 
 
+api.get("/getAppointments", (req, res) => {
+  let doc_id = req.query.doc_id;
+  db_calls.getAppointments(doc_id).then((result) => {
+    res.json(result)
+    console.log(result);
+  })
+})
+
+api.get("/getRatings", (req, res) =>{
+  let doc_id = req.query.doc_id;
+  db_calls.getRatings(doc_id).then((result) => {
+    res.json(result)
+    console.log(result)
+  })
+})
+
+api.get("/setRatings", (req, res) =>{
+  let doc_id = req.query.doc_id;
+  let user_id = req.query.user_id;
+  let user_rate = req.query.user_rate;
+
+  db_calls.setRatings(doc_id, user_id, user_rate).then(() => {
+    res.json({message:"Success"})
+    console.log("Success!")
+  })
+})
+
+api.get("/getReviews", (req, res) =>{
+  let doc_id = req.query.doc_id;
+  db_calls.getReviews(doc_id).then((result) => {
+    res.json(result)
+    console.log(result)
+  })
+})
+
+api.get("/setReviews", (req, res) =>{
+  let doc_id = req.query.doc_id;
+  let user_id = req.query.user_id;
+  let user_review = req.query.user_review;
+
+  db_calls.setReviews(doc_id, user_id, user_review).then(() => {
+    res.json({message:"Success"})
+    console.log("Success!")
+  })
+})
 
 exports.api = functions.https.onRequest(api);
 
