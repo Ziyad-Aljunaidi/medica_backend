@@ -8,7 +8,10 @@
         "google_map": "https://goo.gl/maps/ojWjDsjvFAdiKA559",
         "address": "Cairo, Elmoqautm Sharea 9",
         "city": "cairo",
-        "Fee": "250"
+        "Fee": "250",
+        "phone_number": "01030533078",
+        "gender":"male"
+
     },
     {
         "id": "17001",
@@ -19,7 +22,9 @@
         "google_map": "https://goo.gl/maps/zPi4ysomRgBDrEK38",
         "address": "Cairo, sharea el 90 el ganobi",
         "city": "cairo",
-        "Fee": "400"
+        "Fee": "400",
+        "phone_number": "01030533078",
+        "gender":"male"
     },
     {
         "id": "17002",
@@ -30,7 +35,9 @@
         "google_map": "https://goo.gl/maps/iBvhnihq8QwQN4Uf7",
         "address": "teraat al tawfiqiya",
         "city": "cairo",
-        "Fee": "100"
+        "Fee": "100",
+        "phone_number": "01030533078",
+        "gender":"male"
     },
     {
         "id": "17003",
@@ -41,7 +48,9 @@
         "google_map": "https://goo.gl/maps/WMotGB6MhGLgAWkY9",
         "address": "alexandria, 23 abd al hameed badway alazarita",
         "city": "cairo",
-        "Fee": "150"
+        "Fee": "150",
+        "phone_number": "01030533078",
+        "gender":"male"
     },
     {
         "id": "17004",
@@ -52,7 +61,9 @@
         "google_map": "https://goo.gl/maps/TAXG2kVGX6mZVCss7",
         "address": "giza, sharee faisel",
         "city": "cairo",
-        "Fee": "300"
+        "Fee": "300",
+        "phone_number": "01030533078",
+        "gender":"female"
     },
     {
         "id": "17005",
@@ -63,7 +74,9 @@
         "google_map": "https://goo.gl/maps/nBg7hwgistmFmpKm6",
         "address": "alexandria, 9 sharea el galaa amam noqtet el horaya",
         "city": "cairo",
-        "Fee": "200"
+        "Fee": "200",
+        "phone_number": "01030533078",
+        "gender":"male"
     },
     {
         "id": "17006",
@@ -74,7 +87,9 @@
         "google_map": "https://goo.gl/maps/CioSgwJtRfDyFQ6C8",
         "address": "Cairo, New cairo, elbostan qesm masr el gdeda",
         "city": "cairo",
-        "Fee": "250"
+        "Fee": "250",
+        "phone_number": "01030533078",
+        "gender":"male"
     },
     {
         "id": "17007",
@@ -85,7 +100,9 @@
         "google_map": "https://goo.gl/maps/Fz6L4gBRJFBD72hs7",
         "address": "cairo, nasr city, tareq el nasr",
         "city": "cairo",
-        "Fee": "200"
+        "Fee": "200",
+        "phone_number": "01030533078",
+        "gender":"female"
     },
     {
         "id": "17008",
@@ -96,7 +113,9 @@
         "google_map": "https://goo.gl/maps/oryytY5bz3dWfBnG6",
         "address": "cairo, hadayeq al qoba, manshyt el sadr",
         "city": "cairo",
-        "Fee": "150"
+        "Fee": "150",
+        "phone_number": "01030533078",
+        "gender":"female"
     },
     {
         "id": "17009",
@@ -107,7 +126,9 @@
         "google_map": "https://goo.gl/maps/XVii4iN7dKuSDqix9",
         "address": "cairo, el 90 el ganobi",
         "city": "cairo",
-        "Fee": "250"
+        "Fee": "250",
+        "phone_number": "01030533078",
+        "gender":"male"
     },
     {
         "id": "17010",
@@ -118,7 +139,9 @@
         "google_map": "https://goo.gl/maps/zGPp3kfc5wVvHMpK6",
         "address": "cairo, el hayee el 3",
         "city": "cairo",
-        "Fee": "200"
+        "Fee": "200",
+        "phone_number": "01030533078",
+        "gender":"male"
     },
     {
         "id": "17011",
@@ -129,7 +152,9 @@
         "google_map": "https://goo.gl/maps/jx39WWojLTWeRR6X6",
         "address": "cairo, nasr city",
         "city": "cairo",
-        "Fee": "400"
+        "Fee": "400",
+        "phone_number": "01030533078",
+        "gender":"female"
     },
     {
         "id": "17012",
@@ -140,7 +165,9 @@
         "google_map": "https://goo.gl/maps/Sm519ZVzTkU1kCJw6",
         "address": "cairo, nozhua ",
         "city": "cairo",
-        "Fee": "500"
+        "Fee": "500",
+        "phone_number": "01030533078",
+        "gender":"male"
     },
     {
         "id": "17013",
@@ -151,7 +178,9 @@
         "google_map": "https://goo.gl/maps/SWv49fyXXvkXjG8m8",
         "address": "cairo, nasr city, el mantqa al 8, 113 mostafa al nahaas",
         "city": "cairo",
-        "Fee": "400"
+        "Fee": "400",
+        "phone_number": "01030533078",
+        "gender":"female"
     },
     {
         "id": "17014",
@@ -163,29 +192,9 @@
         "address": "cairo, nasr city, al mantqa al 6",
         "city": "cairo",
         "Fee": "300",
-        "time": [
-            {
-                "mon": [
-                    "4:30",
-                    "5:00",
-                    "5:30"
-                ]
-            },
-            {
-                "wed": [
-                    "4:30",
-                    "5:00",
-                    "5:30"
-                ]
-            },
-            {
-                "thu": [
-                    "4:30",
-                    "5:00",
-                    "5:30"
-                ]
-            }
-        ]
+        "phone_number": "01030533078",
+        "gender":"male"
+
     },
     {
         "id": "17015",
@@ -196,30 +205,9 @@
         "google_map": "https://goo.gl/maps/RoNa5uB1acAcbMny6",
         "address": "cairo, Medical park1 (nasr orthodentic clinics)",
         "city": "cairo",
-        "Fee": "300",
-        "time": [
-            {
-                "mon": [
-                    "4:30",
-                    "5:00",
-                    "5:30"
-                ]
-            },
-            {
-                "wed": [
-                    "4:30",
-                    "5:00",
-                    "5:30"
-                ]
-            },
-            {
-                "thu": [
-                    "4:30",
-                    "5:00",
-                    "5:30"
-                ]
-            }
-        ]
+        "phone_number": "01030533078",
+        "gender":"male"
+
     },
     {
         "id": "17016",
@@ -231,29 +219,8 @@
         "address": "cairo, tareq el nasr",
         "city": "cairo",
         "Fee": "300",
-        "time": [
-            {
-                "mon": [
-                    "4:30",
-                    "5:00",
-                    "5:30"
-                ]
-            },
-            {
-                "wed": [
-                    "4:30",
-                    "5:00",
-                    "5:30"
-                ]
-            },
-            {
-                "thu": [
-                    "4:30",
-                    "5:00",
-                    "5:30"
-                ]
-            }
-        ]
+        "phone_number": "01030533078",
+        "gender":"male"
     },
     {
         "id": "17017",
@@ -265,29 +232,8 @@
         "address": "cairo,qesm elnozha, elmatar, 9 sharaa bin el wardi",
         "city": "cairo",
         "Fee": "300",
-        "time": [
-            {
-                "mon": [
-                    "4:30",
-                    "5:00",
-                    "5:30"
-                ]
-            },
-            {
-                "wed": [
-                    "4:30",
-                    "5:00",
-                    "5:30"
-                ]
-            },
-            {
-                "thu": [
-                    "4:30",
-                    "5:00",
-                    "5:30"
-                ]
-            }
-        ]
+        "phone_number": "01030533078",
+        "gender":"male"
     },
     {
         "id": "17018",
@@ -299,29 +245,8 @@
         "address": "giza, Twin Tower - Shiekh Zayed",
         "city": "cairo",
         "Fee": "400",
-        "time": [
-            {
-                "mon": [
-                    "4:30",
-                    "5:00",
-                    "5:30"
-                ]
-            },
-            {
-                "wed": [
-                    "4:30",
-                    "5:00",
-                    "5:30"
-                ]
-            },
-            {
-                "thu": [
-                    "4:30",
-                    "5:00",
-                    "5:30"
-                ]
-            }
-        ]
+        "phone_number": "01030533078",
+        "gender":"male"
     },
     {
         "id": "17019",
@@ -333,29 +258,8 @@
         "address": "cairo, zahraa al maadi, 1/3 shatr alkhames degla",
         "city": "cairo",
         "Fee": "200",
-        "time": [
-            {
-                "mon": [
-                    "4:30",
-                    "5:00",
-                    "5:30"
-                ]
-            },
-            {
-                "wed": [
-                    "4:30",
-                    "5:00",
-                    "5:30"
-                ]
-            },
-            {
-                "thu": [
-                    "4:30",
-                    "5:00",
-                    "5:30"
-                ]
-            }
-        ]
+        "phone_number": "01030533078",
+        "gender":"male"
     },
     {
         "id": "17020",
@@ -366,7 +270,9 @@
         "google_map": "https://goo.gl/maps/MgqFzcqqX34AZ97t9",
         "address": "cairo, mostafa al nahaas, el mantqa el 8",
         "city": "cairo",
-        "Fee": "250"
+        "Fee": "250",
+        "phone_number": "01030533078",
+        "gender":"male"
     },
     {
         "id": "17021",
@@ -377,7 +283,9 @@
         "google_map": "https://g.page/Loay-Scan-Center-Heliopolis?share",
         "address": "cairo, masr elgdeda, sharea khalifa al maamon",
         "city": "cairo",
-        "Fee": "300"
+        "Fee": "300",
+        "phone_number": "01030533078",
+        "gender":"male"
     },
     {
         "id": "17022",
@@ -388,7 +296,9 @@
         "google_map": "https://goo.gl/maps/XTt6cp6gtyJkTL9x7",
         "address": "cairo, talaat mostafa, Medical Center 3",
         "city": "cairo",
-        "Fee": "300"
+        "Fee": "300",
+        "phone_number": "01030533078",
+        "gender":"male"
     },
     {
         "id": "17023",
@@ -399,7 +309,9 @@
         "google_map": "https://goo.gl/maps/t3yt7kUaknZihT4b6",
         "address": "cairo qesm el nozhua, gamal abdlnasr, gesr alsuez",
         "city": "cairo",
-        "Fee": "80"
+        "Fee": "80",
+        "phone_number": "01030533078",
+        "gender":"male"
     },
     {
         "id": "17024",
@@ -410,7 +322,9 @@
         "google_map": "https://goo.gl/maps/NwZCeGyuXivDyKGm8",
         "address": "cairo, masr elgdeda, Hegazy Dental Clinic ",
         "city": "cairo",
-        "Fee": "200"
+        "Fee": "200",
+        "phone_number": "01030533078",
+        "gender":"male"
     },
     {
         "id": "17025",
@@ -421,6 +335,8 @@
         "google_map": "https://goo.gl/maps/WTMzAy5vTMegrP34A",
         "address": "cairo, el maadi, intersection of nasr street,CLINIC32 ",
         "city": "cairo",
-        "Fee": "200"
+        "Fee": "200",
+        "phone_number": "01030533078",
+        "gender":"male"
     }
 ]

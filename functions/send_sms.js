@@ -19,14 +19,31 @@ let messagebird = require('messagebird')(messagebird_api);
       console.log(response);
     });
 */
+function formatTime(str, index, stringToAdd) {
+  return (
+    str.substring(0, index) + stringToAdd + str.substring(index, str.length)
+  );
+}
 
+function finalTime(time){
+  let final_time;
+  if(time.toString().length == '3'){
+    final_time=formatTime(time.toString(), "1", ":")
+  }else if(time.toString().length == "4"){
+    final_time = formatTime(time.toString(), "2", ":")
+  }else{
+    final_time = 0
+  }
+  return final_time
+}
+
+//console.log(finalTime(1130))
 //let docMapLocation = "https://goo.gl/maps/4yfW2c4PQHSn1GhUA"
 function sendMsg(docName, docAddress, docMapLocation, user_phonenumber){
   var params = {
     'originator': 'Medica',
     'recipients': [
-    //'+201113357439'
-     //`${user_phonenumber}`
+
      user_phonenumber
   ],
     'body': `Your appointment for Dr. ${docName} is confirmed, clinic address: ${docAddress}, Google-Map: ${docMapLocation}`
@@ -41,7 +58,29 @@ function sendMsg(docName, docAddress, docMapLocation, user_phonenumber){
   });
 }
 
-function sendMsgDemo(docName, docAddress, docMapLocation, user_name,user_phonenumber, user_time){
+function confirmMsg(docName, docAddress, docMapLocation, user_name,user_phonenumber, user_time,user_date){
+  var params = {
+    'originator': 'Medica',
+    'recipients': [
+     "+2"+user_phonenumber
+  ],
+    'body': `Dear ${user_name},\nYour appointment for Dr. ${docName} is confirmed at ${finalTime(user_time)}pm, ${user_date}, clinic address: ${docAddress}, Google-Map: ${docMapLocation}`
+  };
+
+  
+
+  messagebird.messages.create(params, function (err, response) {
+    if (err) {
+      return console.log(err);
+    }
+    console.log(response);
+  });
+}
+
+//confirmMsg("Mohsen", "7g/4 el-laselky street, maadi", "NONE", "Ziyad", "01030533078", "530", "06/30/2022")
+
+
+function cancelMsg(docName, user_name,user_phonenumber, user_time){
   var params = {
     'originator': 'Medica',
     'recipients': [
@@ -49,9 +88,8 @@ function sendMsgDemo(docName, docAddress, docMapLocation, user_name,user_phonenu
      //`${user_phonenumber}`
      "+2"+user_phonenumber
   ],
-    'body': `Dear ${user_name}\n Your appointment for Dr. ${docName} is confirmed at ${user_time}, clinic address: ${docAddress}, Google-Map: ${docMapLocation}`
+    'body': `Dear ${user_name},\nYour appointment for Dr. ${docName} at ${finalTime(user_time)}pm is cancelled`
   };
-  //console.log(user_phonenumber)
 
   messagebird.messages.create(params, function (err, response) {
     if (err) {
@@ -62,13 +100,8 @@ function sendMsgDemo(docName, docAddress, docMapLocation, user_name,user_phonenu
 }
 
 
-
-//let location = "https://goo.gl/maps/2GrKLVkW93az8twZA"
-//let name = "Johnny sins"
-//let address = "cairo, maadi"
-//sendMsg(name, address, docMapLocation)
-
 module.exports={
   sendMsg,
-  sendMsgDemo
+  confirmMsg,
+  cancelMsg
 }

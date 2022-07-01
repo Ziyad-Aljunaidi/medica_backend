@@ -21,6 +21,7 @@
     "firebase": "^9.6.8",
     "firebase-admin": "^10.0.2",
     "firebase-functions": "^3.18.0",
+    "fuse.js": "^6.6.2",
     "messagebird": "^3.7.2",
     "mongodb": "^4.2.2",
     "morgan": "^1.10.0",
